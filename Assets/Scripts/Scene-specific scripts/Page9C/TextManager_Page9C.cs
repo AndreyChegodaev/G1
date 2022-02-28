@@ -11,6 +11,13 @@ public class TextManager_Page9C: MonoBehaviour
     [SerializeField]
     public Button nextButton;
 
+    public static TextManager_Page9C instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
@@ -25,10 +32,6 @@ public class TextManager_Page9C: MonoBehaviour
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-        {           
-            paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-        }
     }
 
     void Lineup()

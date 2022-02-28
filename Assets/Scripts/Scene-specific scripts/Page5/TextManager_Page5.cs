@@ -25,13 +25,6 @@ public class TextManager_Page5: MonoBehaviour
         int i = spawnIndex++;
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-
-        if (paragraphs[paragraphs.Count - 4].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-        {
-            paragraphs[paragraphs.Count - 3].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-            paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-            paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-        }
     }
 
     void Exceptions()
@@ -41,13 +34,13 @@ public class TextManager_Page5: MonoBehaviour
             paragraphs[0] = null;
         }
        
-        if (SaveManager.instance.activeSave.firstPlaytrough == true)
+        /*if (SaveManager.instance.activeSave.firstPlaytrough == true)
         {
             paragraphs[6] = null;
         } else
         {
             paragraphs[5] = null;
-        }
+        }*/
         paragraphs.RemoveAll(item => item == null);
 
     }

@@ -34,7 +34,7 @@ public class AudioManager_Page9A : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentTrack == audioClips.Count - 1)
+        if (currentTrack == audioClips.Count - 1 || SaveManager.instance.activeSave.waitAtTheDoor > 3)
         {
             nextTrack.interactable = false;
         } else

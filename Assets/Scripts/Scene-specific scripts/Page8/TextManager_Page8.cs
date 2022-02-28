@@ -17,7 +17,7 @@ public class TextManager_Page8: MonoBehaviour
         Lineup();
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (SaveManager.instance.activeSave.heardVoice == true)
+       /* if (SaveManager.instance.activeSave.heardVoice == true)
         {
             if (paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
             {
@@ -26,7 +26,7 @@ public class TextManager_Page8: MonoBehaviour
                 paragraphs[3].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
                 paragraphs[4].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
             }
-        }
+        }*/
 
         nextButton.onClick.AddListener(TaskOnClick);
 
@@ -39,7 +39,7 @@ public class TextManager_Page8: MonoBehaviour
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (SaveManager.instance.activeSave.hasFinger == true)
+        /*if (SaveManager.instance.activeSave.hasFinger == true)
         {
             if (paragraphs[2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
             {
@@ -55,7 +55,7 @@ public class TextManager_Page8: MonoBehaviour
                 paragraphs[3].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
                 paragraphs[4].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
             }
-        }
+        }*/
         
     }
 
@@ -65,20 +65,24 @@ public class TextManager_Page8: MonoBehaviour
         {
             ExceptionsSecondary1();
         }
-        else ExceptionsSecondary2();
+        else
+        {
+            ExceptionsSecondary2();
+        }
     }
 
     void ExceptionsSecondary1()
     {
-            paragraphs[1] = null;
-            paragraphs[2] = null;
-            paragraphs[3] = null;
+        paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        paragraphs[1] = null;
+        paragraphs[2] = null;
+        paragraphs[3] = null;
 
-        if (SaveManager.instance.activeSave.hasFinger == false)
+/*        if (SaveManager.instance.activeSave.hasFinger == false)
         {
             paragraphs[6] = null;
             paragraphs[7] = null;
-        }
+        }*/
 
         paragraphs.RemoveAll(item => item == null);
 
@@ -89,11 +93,11 @@ public class TextManager_Page8: MonoBehaviour
     {
             paragraphs[0] = null;
 
-        if (SaveManager.instance.activeSave.hasFinger == false)
+/*        if (SaveManager.instance.activeSave.hasFinger == false)
         {
             paragraphs[6] = null;
             paragraphs[7] = null;
-        }
+        }*/
 
         paragraphs.RemoveAll(item => item == null);
     }

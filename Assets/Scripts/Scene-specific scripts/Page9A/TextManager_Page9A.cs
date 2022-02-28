@@ -11,6 +11,13 @@ public class TextManager_Page9A: MonoBehaviour
     [SerializeField]
     public Button nextButton;
 
+    public static TextManager_Page9A instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         ExceptionPrimary();
@@ -27,7 +34,7 @@ public class TextManager_Page9A: MonoBehaviour
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (SaveManager.instance.activeSave.waitAtTheDoor == 1)
+/*        if (SaveManager.instance.activeSave.waitAtTheDoor == 1)
         {
             if (paragraphs[1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
             {
@@ -46,25 +53,25 @@ public class TextManager_Page9A: MonoBehaviour
                     paragraph.GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
                 }
             }
-        }
+        }*/
 
     }
 
     void ExceptionPrimary()
     {
-        ExceptionsChoices();
+        //ExceptionsChoices();
         ExceptionsParagraphs();
         paragraphs.RemoveAll(item => item == null);
     }
 
-    void ExceptionsChoices()
+/*    void ExceptionsChoices()
     {
         if (SaveManager.instance.activeSave.hasFinger == false)
         {
             paragraphs[6] = null;
             paragraphs[7] = null;
         }
-    }
+    }*/
 
     void ExceptionsParagraphs()
     {
@@ -72,21 +79,21 @@ public class TextManager_Page9A: MonoBehaviour
         {
             paragraphs[1] = null;
             paragraphs[2] = null;
-            paragraphs[8] = null;
+            //paragraphs[8] = null;
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 2)
         {
             paragraphs[0] = null;
             paragraphs[2] = null;
-            paragraphs[8] = null;
+            //paragraphs[8] = null;
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 3)
         {
             paragraphs[0] = null;
             paragraphs[1] = null;
-            paragraphs[8] = null;
+            //paragraphs[8] = null;
         }
 
         else
@@ -95,11 +102,12 @@ public class TextManager_Page9A: MonoBehaviour
             paragraphs[1] = null;
             paragraphs[2] = null;
             paragraphs[3] = null;
-            paragraphs[4] = null;
-            paragraphs[5] = null;
-            paragraphs[6] = null;
-            paragraphs[7] = null;
-            paragraphs[8].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            //paragraphs[4] = null;
+            //paragraphs[5] = null;
+            //paragraphs[6] = null;
+            //paragraphs[7] = null;
+            //paragraphs[8].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            nextButton.interactable = false;
         }
 
     }

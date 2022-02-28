@@ -13,6 +13,7 @@ public class IntObjManager : MonoBehaviour
     private Color initialColor = Color.white;
     public Color hoverColor = Color.green;
     private new SpriteRenderer renderer;
+    private bool flag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,28 +25,46 @@ public class IntObjManager : MonoBehaviour
         renderer.color = initialColor;
     }
 
+    private void Update()
+    {
+        if (TextManager_Page2.instance.paragraphs[TextManager_Page2.instance.paragraphs.Count-1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+        {
+            flag = true;
+        }
+    }
+
     // Update is called once per frame
     private void OnMouseOver()
     {
-        renderer.color = hoverColor;
-        TooltipSystem.Show(content, header);
-
-        if (Input.GetMouseButtonDown(0))
+        if (flag == true) 
         {
-            PageTurner.instance.TaskOnClick();
+            renderer.color = hoverColor;
+            TooltipSystem.Show(content, header);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                PageTurner.instance.TaskOnClick();
+            }
         }
+
     }
 
     private void OnMouseEnter()
     {
-        audioSource.Play();
+        if (flag == true)
+        {
+            audioSource.Play();
+        }
     }
 
     private void OnMouseExit()
     {
-        renderer.color = initialColor;
-        TooltipSystem.Hide();
-        audioSource.Stop();
+        if (flag == true)
+        {
+            renderer.color = initialColor;
+            TooltipSystem.Hide();
+            audioSource.Stop();
+        }
     }
     public void Mute()
     {
