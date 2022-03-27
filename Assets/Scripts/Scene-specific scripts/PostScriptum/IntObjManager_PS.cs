@@ -2,32 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntObjManager : MonoBehaviour
+public class IntObjManager_PS : MonoBehaviour 
 {
+    public GameObject princess;
+    
     public AudioSource audioSource;
     public AudioClip audioOnHover;
-    
+
     public string header;
     public string content;
-    
+
     private Color initialColor = Color.white;
     public Color hoverColor = Color.green;
     private new SpriteRenderer renderer;
     private bool flag = false;
 
+    private GameObject choice1;
+    //private GameObject choice2;
+    //private GameObject choice3;
+    //private GameObject choice4;
+
+
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = audioOnHover; 
-        
+        audioSource.clip = audioOnHover;
+
         renderer = GetComponent<SpriteRenderer>();
         renderer.color = initialColor;
+
+        choice1 = GameObject.Find("Ring");
+
     }
 
     private void Update()
     {
-        if (TextManager_Page2.instance.paragraphs[TextManager_Page2.instance.paragraphs.Count-1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+        if (TextManager_PS.instance.paragraphs[TextManager_PS.instance.paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;
         }
@@ -36,14 +47,24 @@ public class IntObjManager : MonoBehaviour
     // Update is called once per frame
     private void OnMouseOver()
     {
-        if (flag == true) 
+        if (flag == true)
         {
             renderer.color = hoverColor;
             TooltipSystem.Show(content, header);
 
             if (Input.GetMouseButtonDown(0))
             {
-                PageTurner.instance.TaskOnClick();
+
+                AudioManager_PS.instance.audioSource.Stop();
+                princess.GetComponent<PrincessMonolog_PS>().TaskOnClick();
+                gameObject.GetComponent<PageTurner>().TaskOnClick();
+               
+                
+                if (gameObject == choice1)
+                {
+                    GameManager.instance.TrueEnding();
+                    GameManager.instance.StartNewGame(); 
+                } 
             }
         }
 
@@ -70,5 +91,4 @@ public class IntObjManager : MonoBehaviour
     {
         audioSource.mute = !audioSource.mute;
     }
-
 }

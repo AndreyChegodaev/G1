@@ -11,6 +11,13 @@ public class TextManager_Page5: MonoBehaviour
     [SerializeField]
     public Button nextButton;
 
+    public static TextManager_Page5 instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         Exceptions();

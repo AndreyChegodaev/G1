@@ -6,6 +6,7 @@ public class PrincessMonolog_Page4 : MonoBehaviour
 {
     public GameObject exclamationMark;
     public AudioClip princessLine;
+    private string content;
     //public Sprite princessTalking;
     AudioSource audioSource;
     private bool flag = false;
@@ -41,7 +42,15 @@ public class PrincessMonolog_Page4 : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && flag == true)
         {
             audioSource.Play();
-        }
-        
+            CCManager.instance.Show();
+            StartCoroutine(WaitToHideCC());
+        }   
+    }
+
+    IEnumerator WaitToHideCC()
+    {
+        yield return new WaitForSeconds(princessLine.length);
+        CCManager.instance.Hide();
     }
 }
+

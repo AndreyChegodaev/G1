@@ -47,6 +47,11 @@ public class FinalCameraMover : MonoBehaviour
     {
         i++;
         flag = true;
+        
+        if (i == 4)
+        {
+            GameManager.instance.FirstPlaytroughDone();
+        }
     }
 
 }
