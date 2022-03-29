@@ -1941,6 +1941,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 935969062548685162, guid: bde154ac0a989d24fba738d4a6c757d0, type: 3}
   m_PrefabInstance: {fileID: 993038441}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &993038443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 935969062548685163, guid: bde154ac0a989d24fba738d4a6c757d0, type: 3}
+  m_PrefabInstance: {fileID: 993038441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1316751354a234fa0e0cb3bab6d4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1007795290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3269,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 993038443}
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Settings_CCSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367217360966274768, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2339620740988597426, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_Name
       value: UI canvas

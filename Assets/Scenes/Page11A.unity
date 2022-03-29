@@ -1304,8 +1304,8 @@ Transform:
   m_Children:
   - {fileID: 1034230426}
   - {fileID: 1696287999}
-  - {fileID: 1131250164}
   - {fileID: 1311453459}
+  - {fileID: 1131250164}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1845,6 +1845,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 993038443}
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Settings_CCSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 812308894136172244, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2339620740988597426, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_Name
       value: UI canvas

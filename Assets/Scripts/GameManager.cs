@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     }
     public ActivePicture activePicture;
 
+    public bool settings_CCSwitch = false;
+
     private void Awake()
     {
         instance = this;
@@ -247,6 +249,13 @@ public class GameManager : MonoBehaviour
         SaveManager.instance.activeSave.activePicture = SaveData.ActivePicture.nothing;
 
         SaveManager.instance.Save();
+    }
+
+    public void Settings_CCSwitch()
+    {
+        SaveManager.instance.activeSave.settings_CCSwitch = !SaveManager.instance.activeSave.settings_CCSwitch;
+        settings_CCSwitch = !settings_CCSwitch;
+
     }
 
 }

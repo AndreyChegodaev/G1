@@ -112,4 +112,6 @@ public class SaveData
         goodish,
     }
     public ActivePicture activePicture;
+
+    public bool settings_CCSwitch = false;
 }

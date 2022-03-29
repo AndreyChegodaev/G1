@@ -28,11 +28,13 @@ public class CCManager : MonoBehaviour
 
     public void Show()
     {
+        if (SaveManager.instance.activeSave.settings_CCSwitch == true)
         instance.gameObject.SetActive(true);
     }
 
     public void Hide()
     {
-        instance.gameObject.SetActive(false);
+        if (SaveManager.instance.activeSave.settings_CCSwitch == true)
+            instance.gameObject.SetActive(false);
     }
 }
