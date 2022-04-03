@@ -6,7 +6,6 @@ public class PrincessMonolog_Page4 : MonoBehaviour
 {
     public GameObject exclamationMark;
     public AudioClip princessLine;
-    private string content;
     //public Sprite princessTalking;
     AudioSource audioSource;
     private bool flag = false;

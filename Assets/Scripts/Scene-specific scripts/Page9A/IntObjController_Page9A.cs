@@ -28,6 +28,8 @@ public class IntObjController_Page9A : MonoBehaviour
         {
             door.SetActive(false);
             man.SetActive(true);
+            bushes.SetActive(false);
+            doormat.SetActive(false);
         }
     }
 }

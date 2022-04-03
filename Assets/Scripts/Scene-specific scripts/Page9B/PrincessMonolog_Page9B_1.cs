@@ -41,7 +41,14 @@ public class PrincessMonolog_Page9B_1 : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && flag == true)
         {
             audioSource.Play();
+            CCManager_Page9B.instance.Show();
+            StartCoroutine(WaitToHideCC());
         }
-        
+    }
+
+    IEnumerator WaitToHideCC()
+    {
+        yield return new WaitForSeconds(princessLine.length);
+        CCManager_Page9B.instance.Hide();
     }
 }

@@ -77,7 +77,12 @@ public class AudioManager_F1B : MonoBehaviour
 
         audioSource.clip = audioClips[currentTrack];
         audioSource.Play();
+        CCManager_finals.instance.Show();
     }
+
+
+
+
     public void StopAudio()
     {
         audioSource.Stop();
@@ -90,7 +95,7 @@ public class AudioManager_F1B : MonoBehaviour
     }
 
     void Exceptions()
-        //Aaght, this method is working, but it's much less straight-forward than the one in AudioManager_F30. Use that one for future references (not this one).
+        
     {
         if (SaveManager.instance.activeSave.hasFinger == true)
         {
