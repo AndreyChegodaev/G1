@@ -77,6 +77,7 @@ public class AudioManager_F3O : MonoBehaviour
 
         audioSource.clip = audioClips[currentTrack];
         audioSource.Play();
+        CCManager_F3O.instance.Show();
     }
     public void StopAudio()
     {

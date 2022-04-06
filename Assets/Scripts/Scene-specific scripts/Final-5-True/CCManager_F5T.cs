@@ -4,10 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class CCManager_finals : MonoBehaviour
+public class CCManager_F5T : MonoBehaviour
 
 {
-    public static CCManager_finals instance;
+    public static CCManager_F5T instance;
+
 
     private void Awake()
     {
@@ -30,9 +31,9 @@ public class CCManager_finals : MonoBehaviour
         if (SaveManager.instance.activeSave.settings_CCSwitch == true)
         {
             gameObject.GetComponent<Image>().enabled = true;
-            CCController_F1B.instance.ShowLine();
-            if (CCController_F1B.instance.currentLine > 0)
-            CCController_F1B.instance.lines[CCController_F1B.instance.currentLine-1].SetActive(false);
+            CCController_F5T.instance.ShowLine();
+            if (CCController_F5T.instance.currentLine > 0)
+                CCController_F5T.instance.lines[CCController_F5T.instance.currentLine-1].SetActive(false);
         }
     }
 }

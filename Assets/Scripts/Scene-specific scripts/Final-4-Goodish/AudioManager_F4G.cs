@@ -77,6 +77,7 @@ public class AudioManager_F4G : MonoBehaviour
 
         audioSource.clip = audioClips[currentTrack];
         audioSource.Play();
+        CCManager_F4G.instance.Show();
     }
     public void StopAudio()
     {

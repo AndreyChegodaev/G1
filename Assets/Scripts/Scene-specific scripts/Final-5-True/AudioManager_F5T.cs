@@ -81,6 +81,8 @@ public class AudioManager_F5T : MonoBehaviour
 
         audioSource.clip = audioClips[currentTrack];
         audioSource.Play();
+        CCManager_F5T.instance.Show();
+
     }
     public void StopAudio()
     {

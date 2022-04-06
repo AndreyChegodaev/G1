@@ -77,7 +77,7 @@ public class AudioManager_F1B : MonoBehaviour
 
         audioSource.clip = audioClips[currentTrack];
         audioSource.Play();
-        CCManager_finals.instance.Show();
+        CCManager_F1B.instance.Show();
     }
 
 
