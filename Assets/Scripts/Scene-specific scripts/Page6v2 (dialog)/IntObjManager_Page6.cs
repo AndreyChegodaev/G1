@@ -54,6 +54,10 @@ public class IntObjManager_Page6 : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                choice1.GetComponent<PolygonCollider2D>().enabled = false;
+                choice2.GetComponent<PolygonCollider2D>().enabled = false;
+                choice3.GetComponent<PolygonCollider2D>().enabled = false;
+
                 if (gameObject == choice1)
                 {
                     gameObject.GetComponent<PageTurner>().TaskOnClick();

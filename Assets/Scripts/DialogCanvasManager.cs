@@ -5,8 +5,11 @@ using UnityEngine;
 public class DialogCanvasManager : MonoBehaviour
 {
 
+
     [SerializeField]
     GameObject dialogCanvas;
+
+
 
 
     public void StartDialog()
@@ -16,8 +19,8 @@ public class DialogCanvasManager : MonoBehaviour
 
     public void StopDialog()
     {
-            dialogCanvas.SetActive(false);
-            PageTurnerForDialog.instance.TaskOnClick();
+        dialogCanvas.SetActive(false);
+        PageTurnerForDialog.instance.TaskOnClick();
     }
 
 }

@@ -8,7 +8,7 @@ public class CCController_Page6 : MonoBehaviour
 
     void Start()
     {
-        if (SaveManager.instance.activeSave.dejaVu == 1)
+        if (SaveManager.instance.activeSave.dejaVu <= 1)
         {
             Destroy(lines[1]);
             Destroy(lines[2]);

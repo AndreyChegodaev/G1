@@ -55,6 +55,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
 
                 if (gameObject == choice1)
                 {
+                    choice1.GetComponent<PolygonCollider2D>().enabled = false;
                     gameObject.GetComponentInChildren<DialogCanvasManager>().StartDialog();
                     AudioManager_Page9C.instance.StopAudio();
                 }
