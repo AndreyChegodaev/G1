@@ -31,11 +31,6 @@ public class TextManager_Page55B: MonoBehaviour
     {
         int i = spawnIndex++;
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-
-        if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-        {
-            paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-        }
     }
 
     void Exceptions()

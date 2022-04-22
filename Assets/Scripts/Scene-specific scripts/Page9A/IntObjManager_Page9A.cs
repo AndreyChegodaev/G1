@@ -17,8 +17,9 @@ public class IntObjManager_Page9A : MonoBehaviour
 
     private GameObject choice1;
     private GameObject choice2;
-    //private GameObject choice3;
-    //private GameObject choice4;
+    private GameObject choice3;
+    private GameObject choice4;
+    private GameObject choice5;
 
 
     // Start is called before the first frame update
@@ -32,8 +33,9 @@ public class IntObjManager_Page9A : MonoBehaviour
 
         choice1 = GameObject.Find("Path");
         choice2 = GameObject.Find("Door");
-        //choice3 = GameObject.Find("Bushes");
-        //choice4 = GameObject.Find("Doormat");
+        choice3 = GameObject.Find("Bushes");
+        choice4 = GameObject.Find("Doormat");
+        choice5 = GameObject.Find("Man");
     }
 
     private void Update()
@@ -62,12 +64,27 @@ public class IntObjManager_Page9A : MonoBehaviour
                 gameObject.GetComponent<PageTurner>().TaskOnClick();
                 if (gameObject == choice1)
                 {
+                    GameManager.instance.PF3O_2_Unlocked();
                     GameManager.instance.SetHomeFromTower();
                 } 
                 else if (gameObject == choice2)
                 {
+                    GameManager.instance.Page9A_Unlocked();
                     GameManager.instance.WaitAtTheDoor();
                 }
+                else if (gameObject == choice3)
+                {
+                    GameManager.instance.Page9B_Unlocked();
+                }
+                else if (gameObject == choice4)
+                {
+                    GameManager.instance.Page9C_Unlocked();
+                }
+                else if (gameObject == choice5)
+                {
+                    GameManager.instance.Page10_Unlocked();
+                }
+
             }
         }
 

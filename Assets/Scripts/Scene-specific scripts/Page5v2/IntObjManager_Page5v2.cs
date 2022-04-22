@@ -32,8 +32,8 @@ public class IntObjManager_Page5v2 : MonoBehaviour
 
         choice1 = GameObject.Find("Bridge 1");
         choice2 = GameObject.Find("Bridge 2");
-       // choice3 = GameObject.Find("Path");
-       // choice4 = GameObject.Find("Hidden path");
+        choice3 = GameObject.Find("Path");
+        choice4 = GameObject.Find("Hidden path");
     }
 
     private void Update()
@@ -55,9 +55,23 @@ public class IntObjManager_Page5v2 : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 gameObject.GetComponent<PageTurner>().TaskOnClick();
-                if (gameObject == choice1 || gameObject == choice2)
+                if (gameObject == choice1)
                 {
                     GameManager.instance.DejaVu();
+                    GameManager.instance.Page55B_Unlocked();
+                }
+                else if (gameObject == choice2)
+                {
+                    GameManager.instance.DejaVu();
+                    GameManager.instance.Page55A_Unlocked();
+                }
+                else if (gameObject == choice3)
+                {
+                    GameManager.instance.PF3O_1_Unlocked();
+                }
+                else if (gameObject == choice4)
+                {
+                    GameManager.instance.Page7_Unlocked();
                 }
             }
         }

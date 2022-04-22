@@ -56,6 +56,7 @@ public class IntObjManager_Page9B : MonoBehaviour
                 if (gameObject == choice1)
                 {
                     GameManager.instance.HeardVoice();
+                    GameManager.instance.Page8_Unlocked();
                 } 
             }
         }

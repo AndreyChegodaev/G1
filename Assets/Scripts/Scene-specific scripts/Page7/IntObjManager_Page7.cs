@@ -51,6 +51,7 @@ public class IntObjManager_Page7 : MonoBehaviour
             {
                 if (gameObject == choice1)
                 {
+                    GameManager.instance.Page8_Unlocked();
                     gameObject.GetComponent<PageTurner>().TaskOnClick();
                 }        
             }

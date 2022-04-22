@@ -44,6 +44,7 @@ public class IntObjManager_Page3A : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 gameObject.GetComponent<PageTurner>().TaskOnClick();
+                GameManager.instance.Page4_Unlocked();
             }
         }
 

@@ -50,6 +50,6 @@ public class TextManager_PF3O: MonoBehaviour
     {
         // this looks spooky but it is basically: put an object beneath at (1/2 of the width of object above + 1/2 width of the object beneath)
 
-        paragraphs[1].transform.position = paragraphs[0].transform.position + Vector3.down * (paragraphs[0].GetComponent<Collider2D>().bounds.extents.y + paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + .1f);     
+        paragraphs[1].transform.position = paragraphs[0].transform.position + Vector3.down * (paragraphs[0].GetComponent<Collider2D>().bounds.extents.y + paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + .2f);     
     }
 }

@@ -30,8 +30,8 @@ public class SaveManager : MonoBehaviour
 
     void Start()
     {
-        saveButton.onClick.AddListener(Save);
-        loadButton.onClick.AddListener(Load);
+        //saveButton.onClick.AddListener(Save);
+        //loadButton.onClick.AddListener(Load);
         //deleteButton.onClick.AddListener(Delete);
 
     }
@@ -114,4 +114,40 @@ public class SaveData
     public ActivePicture activePicture;
 
     public bool settings_CCSwitch = false;
+
+    public bool f1B_Unlocked = false;
+    public bool f3O_1_Unlocked = false;
+    public bool f3O_2_Unlocked = false;
+    public bool f3O_3_Unlocked = false;
+    public bool f4G_Unlocked = false;
+    public bool f5T_Unlocked = false;
+    public bool page1_Unlocked = true; //level 1
+    public bool page2_Unlocked = false;
+    public bool page35_Unlocked = false;
+    public bool page3A_Unlocked = false;
+    public bool page3B_Unlocked = false;
+    public bool page3C_Unlocked = false;
+    public bool page4_Unlocked = false;
+    public bool page55A_Unlocked = false;
+    public bool page55B_Unlocked = false;
+    public bool page5_Unlocked = false;
+    public bool page5v2_Unlocked = false;
+    public bool page65A_Unlocked = false;
+    public bool page6v1_Unlocked = false;
+    public bool page6v2_Unlocked = false;
+    public bool page7_Unlocked = false;
+    public bool page8_Unlocked = false;
+    public bool page9A_Unlocked = false;
+    public bool page9B_Unlocked = false;
+    public bool page9C_Unlocked = false;
+    public bool page10_Unlocked = false;
+    public bool page11A_Unlocked = false;
+    public bool pS_Unlocked = false;
+    public bool pF1B_Unlocked = false;
+    public bool pF2B_Unlocked = false;
+    public bool pF3O_1_Unlocked = false;
+    public bool pF3O_2_Unlocked = false;
+    public bool pF3O_3_Unlocked = false;
+    public bool pF4G_Unlocked = false;
+    public bool pF5T_Unlocked = false;
 }

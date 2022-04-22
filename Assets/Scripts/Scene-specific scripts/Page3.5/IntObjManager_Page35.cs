@@ -16,6 +16,7 @@ public class IntObjManager_Page35 : MonoBehaviour
     private bool flag = false;
 
     private GameObject choice1;
+    private GameObject choice2;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class IntObjManager_Page35 : MonoBehaviour
         renderer.color = initialColor;
 
         choice1 = GameObject.Find("Finger");
+        choice2 = GameObject.Find("Ring");
     }
 
     private void Update()
@@ -52,6 +54,12 @@ public class IntObjManager_Page35 : MonoBehaviour
                 if (gameObject == choice1)
                 {
                     GameManager.instance.HasFinger();
+                    GameManager.instance.Page3C_Unlocked();
+
+                } 
+                else if (gameObject == choice2)
+                {
+                    GameManager.instance.Page3A_Unlocked();
                 }
             }
         }

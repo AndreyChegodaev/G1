@@ -66,6 +66,7 @@ public class IntObjManager_Page6 : MonoBehaviour
                 {
                     gameObject.GetComponent<PageTurner>().TaskOnClick();
                     GameManager.instance.KilledByWitch();
+                    GameManager.instance.PF2B_Unlocked();
                 } 
                 else if (gameObject == choice3)
                 {

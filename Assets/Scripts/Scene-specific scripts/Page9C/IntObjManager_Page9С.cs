@@ -16,9 +16,6 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
     private bool flag = false;
 
     private GameObject choice1;
-    private GameObject choice2;
-    private GameObject choice3;
-    private GameObject choice4;
 
 
     // Start is called before the first frame update

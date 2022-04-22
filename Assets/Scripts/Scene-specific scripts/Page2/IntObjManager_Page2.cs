@@ -18,6 +18,7 @@ public class IntObjManager_Page2 : MonoBehaviour
 
     private GameObject choice1;
     private GameObject choice2;
+    private GameObject choice3;
 
 
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class IntObjManager_Page2 : MonoBehaviour
 
         choice1 = GameObject.Find("Skeleton");
         choice2 = GameObject.Find("Finger");
+        choice3 = GameObject.Find("Ring");
     }
 
     private void Update()
@@ -57,11 +59,18 @@ public class IntObjManager_Page2 : MonoBehaviour
                 {
                     GameManager.instance.HasFork();
                     GameManager.instance.OnTree();
+                    GameManager.instance.Page3B_Unlocked(); 
                 }
 
                 else if (gameObject == choice2)
                 {
                     GameManager.instance.HasFinger();
+                    GameManager.instance.Page3C_Unlocked();
+                }
+
+                else if (gameObject == choice3)
+                {
+                    GameManager.instance.Page3A_Unlocked();
                 }
             }
         }

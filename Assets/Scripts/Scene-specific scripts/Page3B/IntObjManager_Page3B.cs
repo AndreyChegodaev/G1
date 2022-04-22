@@ -53,6 +53,7 @@ public class IntObjManager_Page3B : MonoBehaviour
                 {
                     GameManager.instance.HasFork();
                     GameManager.instance.OnTree();
+                    GameManager.instance.Page35_Unlocked();
                 }
             }
         }

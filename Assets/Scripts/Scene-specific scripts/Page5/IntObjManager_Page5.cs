@@ -30,8 +30,8 @@ public class IntObjManager_Page5 : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         renderer.color = initialColor;
 
-        //choice1 = GameObject.Find("Bridge 1");
-        //choice2 = GameObject.Find("Bridge 2");
+        choice1 = GameObject.Find("Bridge 1");
+        choice2 = GameObject.Find("Bridge 2");
         choice3v1 = GameObject.Find("Woods v1");
         choice3v2 = GameObject.Find("Woods v2");
     }
@@ -55,9 +55,26 @@ public class IntObjManager_Page5 : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 gameObject.GetComponent<PageTurner>().TaskOnClick();
-                if (gameObject == choice3v1 || gameObject == choice3v2)
+                if (gameObject == choice1)
+                {
+                    GameManager.instance.Page55B_Unlocked();
+                }
+
+                else if (gameObject == choice2)
+                {
+                    GameManager.instance.Page55A_Unlocked();
+                }
+
+                else if (gameObject == choice3v1)
                 {
                     GameManager.instance.DejaVu();
+                    GameManager.instance.Page6v1_Unlocked();
+                }
+                
+                else if (gameObject == choice3v2)
+                {
+                    GameManager.instance.DejaVu();
+                    GameManager.instance.Page6v2_Unlocked();
                 }
             }
         }

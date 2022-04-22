@@ -32,8 +32,8 @@ public class IntObjManager_Page8 : MonoBehaviour
 
         choice1 = GameObject.Find("Path");
         choice2 = GameObject.Find("Door");
-        //choice3 = GameObject.Find("Bushes");
-        //choice4 = GameObject.Find("Doormat");
+        choice3 = GameObject.Find("Bushes");
+        choice4 = GameObject.Find("Doormat");
     }
 
     private void Update()
@@ -57,11 +57,21 @@ public class IntObjManager_Page8 : MonoBehaviour
                 gameObject.GetComponent<PageTurner>().TaskOnClick();
                 if (gameObject == choice1)
                 {
+                    GameManager.instance.PF3O_2_Unlocked();
                     GameManager.instance.SetHomeFromTower();
                 } 
                 else if (gameObject == choice2)
                 {
+                    GameManager.instance.Page9A_Unlocked();
                     GameManager.instance.WaitAtTheDoor();
+                }
+                else if (gameObject == choice3)
+                {
+                    GameManager.instance.Page9B_Unlocked();
+                }
+                else if (gameObject == choice4)
+                {
+                    GameManager.instance.Page9C_Unlocked();
                 }
             }
         }

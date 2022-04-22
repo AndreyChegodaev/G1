@@ -52,6 +52,7 @@ public class IntObjManager_Page3CC : MonoBehaviour //don't rename to 3C - for so
                 if (gameObject == choice1)
                 {
                     GameManager.instance.HasFinger();
+                    GameManager.instance.Page4_Unlocked();
                 }
             }
         }
