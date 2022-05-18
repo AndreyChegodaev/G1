@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     public ActivePicture activePicture;
 
     public bool settings_CCSwitch = false;
+    public bool settings_MusicSwitch = true;
+    public bool settings_VoiceSwitch = true;
+
 
     public bool f1B_Unlocked = false;
     public bool f3O_1_Unlocked = false;
@@ -432,6 +435,22 @@ public class GameManager : MonoBehaviour
         settings_CCSwitch = !settings_CCSwitch;
 
     }
+
+    public void Settings_MusicSwitch()
+    {
+        SaveManager.instance.activeSave.settings_MusicSwitch = !SaveManager.instance.activeSave.settings_MusicSwitch;
+        settings_MusicSwitch = !settings_MusicSwitch;
+
+    }
+
+    public void Settings_VoiceSwitch()
+    {
+        SaveManager.instance.activeSave.settings_VoiceSwitch = !SaveManager.instance.activeSave.settings_VoiceSwitch;
+        settings_VoiceSwitch = !settings_VoiceSwitch;
+
+    }
+
+
 
     public void F1B_Unlocked()
     {

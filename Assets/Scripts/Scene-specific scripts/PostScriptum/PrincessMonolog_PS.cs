@@ -15,6 +15,15 @@ public class PrincessMonolog_PS : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+    }
+
 
     public void TaskOnClick()
     {

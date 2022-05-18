@@ -20,8 +20,12 @@ public class BackgroundMusic : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void MuteMusic()
+    private void Update()
     {
-        audioSource.mute = !audioSource.mute;
+        if (SaveManager.instance.activeSave.settings_MusicSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
     }
 }

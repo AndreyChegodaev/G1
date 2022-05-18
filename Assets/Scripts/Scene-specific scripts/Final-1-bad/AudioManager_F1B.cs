@@ -39,6 +39,12 @@ public class AudioManager_F1B : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (currentTrack == audioClips.Count - 1)
         {
             nextTrack.interactable = false;
@@ -141,6 +147,12 @@ public class AudioManager_F1B : MonoBehaviour
         {
             audioClips[9] = null;
         }
+
+        if (SaveManager.instance.activeSave.firstPlaytrough == false)
+        {
+            audioClips[11] = null;
+        }
+
 
         audioClips.RemoveAll(item => item == null);
     }

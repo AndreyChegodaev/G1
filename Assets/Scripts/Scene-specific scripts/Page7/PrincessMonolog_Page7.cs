@@ -21,6 +21,12 @@ public class PrincessMonolog_Page7 : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (AudioManager_Page7.instance.currentTrack == AudioManager_Page7.instance.audioClips.Count - 1)
         {
             StartCoroutine(WaitForTrackToEnd());

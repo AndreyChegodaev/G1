@@ -36,6 +36,12 @@ public class IntObjManager_Page65A : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_MusicSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (TextManager_Page65A.instance.paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;

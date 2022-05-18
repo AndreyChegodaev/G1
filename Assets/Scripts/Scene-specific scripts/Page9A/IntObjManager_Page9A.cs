@@ -40,6 +40,12 @@ public class IntObjManager_Page9A : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_MusicSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (SaveManager.instance.activeSave.waitAtTheDoor > 3)
         {
             flag = true;

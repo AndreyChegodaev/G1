@@ -61,6 +61,11 @@ public class CCController_F1B : MonoBehaviour
             lines[9] = null;
         }
 
+        if (SaveManager.instance.activeSave.firstPlaytrough == false)
+        {
+            lines[11] = null;
+        }
+
         lines.RemoveAll(item => item == null);
     }
 

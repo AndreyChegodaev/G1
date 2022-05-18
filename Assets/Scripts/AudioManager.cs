@@ -24,6 +24,12 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (currentTrack == audioClips.Count - 1)
         {
             nextTrack.interactable = false;
@@ -69,11 +75,6 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.Stop();
         stop = true;
-    }
-
-    public void MuteAudio()
-    {
-        audioSource.mute = !audioSource.mute;
     }
 
 }

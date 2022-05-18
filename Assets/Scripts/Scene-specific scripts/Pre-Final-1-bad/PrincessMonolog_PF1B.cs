@@ -23,6 +23,12 @@ public class PrincessMonolog_PF1B : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (AudioManager_PF1B.instance.currentTrack == AudioManager_PF1B.instance.audioClips.Count - 2)
         {
             StartCoroutine(WaitForTrackToEnd());
@@ -51,7 +57,7 @@ public class PrincessMonolog_PF1B : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && flag == true)
         {
             audioSource.Play();
-            CCManager.instance.Show();
+            CCManager_PF1B.instance.Show();
             StartCoroutine(WaitToHideCC());
         }
     }
@@ -59,6 +65,6 @@ public class PrincessMonolog_PF1B : MonoBehaviour
     IEnumerator WaitToHideCC()
     {
         yield return new WaitForSeconds(audioSource.clip.length);
-        CCManager.instance.Hide();
+        CCManager_PF1B.instance.Hide();
     }
 }

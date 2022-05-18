@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383100765035, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_text
-      value: Give it to me!
+      value: You did?! Prove it! Give it to me!
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383100765035, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_fontAsset
@@ -513,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383189323114, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_text
-      value: Looks like you really need this fork...
+      value: Looks like you really need this piece of cutlery...
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383189323114, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_fontAsset
@@ -565,10 +565,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383225526550, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_text
-      value: JUST GIVE ME THE STUPID FORK! Do you know how time-consuming it is to
+      value: Just give me the stupid fork! Do you know how time-consuming it is to
         create realities, construct plot lines, come up with characters, curse them,
         fail, rewrite the text, fail again - just to get some cutlery?! Goblins and
-        gremlins! I am out of forks and can't even eat pasta!
+        gremlins! I am out of forks and can't even eat pasta normally!
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383225526550, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_Enabled
@@ -599,12 +599,16 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383225526550, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5586974466696227437, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
+    - target: {fileID: 3313654383225526550, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383225526550, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383225526552, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_Name
@@ -621,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 3313654383566846955, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_text
       value: Now I see what the witch was talking about. You are the wizard who cursed
-        me and tried to control my destiny!
+        me and was trying to control my destiny!
       objectReference: {fileID: 0}
     - target: {fileID: 3313654383566846955, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_fontAsset
@@ -796,7 +800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I rely on your common sense.
+  m_text: I have to rely on your common sense, I guess.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -930,7 +934,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tried to?.. Well yeah, the witch! She jammed up my plans...
+  m_text: "\u201CWas trying to\u201D... excuse me! Well yeah, the witch! She jammed
+    up my plans a little bit. But we digress: you said you brought the fork\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1089,8 +1094,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: adba03c629c254d4fb5b6189f98cbd08, type: 3}
   - {fileID: 8300000, guid: 0fb21f0303b132a469f6d69fd00e7acc, type: 3}
   - {fileID: 8300000, guid: 716cf3f9c0a0b354b915848c7ac77980, type: 3}
-  - {fileID: 8300000, guid: 726769f400bb10148a8d8730df28b92d, type: 3}
   - {fileID: 8300000, guid: cbe56e2aca8c05345bf5da92f5b05b7b, type: 3}
+  - {fileID: 8300000, guid: 726769f400bb10148a8d8730df28b92d, type: 3}
   - {fileID: 8300000, guid: 46c8b92f02637ea489f456cbdbf613ae, type: 3}
   - {fileID: 8300000, guid: ee6305efd520dfd4e8380c2150fbcd57, type: 3}
   - {fileID: 8300000, guid: 58f19dda9a64a88419fa1b28ff13ad06, type: 3}
@@ -1441,7 +1446,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well yeah, the witch! She jammed up my plans...
+  m_text: "Well yeah, the witch! She jammed up my plans a little bit. But we digress:
+    you said you brought the fork\u2026"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2681,6 +2687,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1367217360966274768, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367217360966274768, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367217360966274768, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 386.88312
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367217360966274768, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.7903
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620740860881442, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620740860881443, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620740860881443, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620740860881443, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 292.61963
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620740860881443, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.7903
+      objectReference: {fileID: 0}
     - target: {fileID: 2339620740988597426, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_Name
       value: UI canvas
@@ -2769,6 +2811,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2339620741659465729, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620741659465729, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620741659465729, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620741659465729, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2780,7 +2838,7 @@ PrefabInstance:
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 415699525}
+      objectReference: {fileID: 993038443}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2791,7 +2849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MuteAudio
+      value: Settings_VoiceSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2799,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogAudioManager_Page11B, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2808,6 +2866,54 @@ PrefabInstance:
     - target: {fileID: 2339620741659465734, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742236014202, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742236014202, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742236014202, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742236014202, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742236014203, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 993038443}
+    - target: {fileID: 2339620742236014203, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Settings_MusicSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742860230225, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742860230230, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742860230230, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742860230230, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339620742860230230, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987286298804275704, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
@@ -2950,16 +3056,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Deal! Oh, I love it! I can do that! What would you like to have in your
-    destiny? Money? Adventures? Passionate love?
+    destiny? Money? More adventures? Passionate love?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5586974466696227437, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278194983
   m_fontColor: {r: 0.15294118, g: 0.07450981, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3219,7 +3325,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alright, I'll give it to you. But on one condition.
+  m_text: Mhmm, and I'll give it to you. But on one condition.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33eb09cb0eb26794f907e3c590199a01, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

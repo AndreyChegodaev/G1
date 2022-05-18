@@ -354,6 +354,7 @@ public class MapManager : MonoBehaviour
         if (SaveManager.instance.activeSave.page9A_Unlocked == true && SaveManager.instance.activeSave.waitAtTheDoor == 0)
         {
             page9A[0].SetActive(true);
+            Debug.Log("9A active");
             page9A[1].SetActive(true);
             page9A[2].SetActive(false);
         }

@@ -27,6 +27,12 @@ public class IntObjManager_Page4 : MonoBehaviour //don't rename to 3C - for some
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_MusicSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (TextManager_Page4.instance.paragraphs[TextManager_Page4.instance.paragraphs.Count-1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;

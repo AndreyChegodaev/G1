@@ -114,6 +114,9 @@ public class SaveData
     public ActivePicture activePicture;
 
     public bool settings_CCSwitch = false;
+    public bool settings_MusicSwitch = true;
+    public bool settings_VoiceSwitch = true;
+
 
     public bool f1B_Unlocked = false;
     public bool f3O_1_Unlocked = false;

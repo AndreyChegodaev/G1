@@ -26,6 +26,12 @@ public class DialogAudioManager_Page65A : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (currentTrack == audioClips.Count - 1)
         {
             nextTrack.interactable = false;

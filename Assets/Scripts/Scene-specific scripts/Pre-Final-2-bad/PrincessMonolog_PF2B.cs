@@ -22,6 +22,12 @@ public class PrincessMonolog_PF2B : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (AudioManager_PF2B.instance.currentTrack == AudioManager_PF2B.instance.audioClips.Count - 2)
         {
             StartCoroutine(WaitForTrackToEnd());

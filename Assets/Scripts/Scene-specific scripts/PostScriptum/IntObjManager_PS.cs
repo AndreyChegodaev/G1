@@ -38,6 +38,12 @@ public class IntObjManager_PS : MonoBehaviour
 
     private void Update()
     {
+        if (SaveManager.instance.activeSave.settings_MusicSwitch == false)
+        {
+            audioSource.mute = true;
+        }
+        else audioSource.mute = false;
+
         if (TextManager_PS.instance.paragraphs[TextManager_PS.instance.paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;
