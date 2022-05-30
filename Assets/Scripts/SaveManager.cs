@@ -116,6 +116,7 @@ public class SaveData
     public bool settings_CCSwitch = false;
     public bool settings_MusicSwitch = true;
     public bool settings_VoiceSwitch = true;
+    public bool settings_WelcomePopUp = true;
 
 
     public bool f1B_Unlocked = false;

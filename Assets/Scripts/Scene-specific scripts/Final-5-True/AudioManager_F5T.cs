@@ -50,6 +50,7 @@ public class AudioManager_F5T : MonoBehaviour
         if (currentTrack == audioClips.Count - 1)
         {
             nextTrack.interactable = false;
+            nextTrack.GetComponent<Image>().enabled = false;
         } else
             nextTrack.interactable = true;
        

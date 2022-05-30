@@ -43,7 +43,7 @@ public class FinalMenuManager : MonoBehaviour
         {
             buttonDiary.gameObject.SetActive(true);
             unlockText.gameObject.SetActive(false);
-            buttonDiary.interactable = true;
+            buttonDiary.interactable = false;
         }
 
     }

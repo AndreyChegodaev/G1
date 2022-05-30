@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public bool settings_CCSwitch = false;
     public bool settings_MusicSwitch = true;
     public bool settings_VoiceSwitch = true;
+    public bool settings_WelcomePopUp = true;
 
 
     public bool f1B_Unlocked = false;
@@ -424,6 +425,8 @@ public class GameManager : MonoBehaviour
         pF4G_Unlocked = false;
         SaveManager.instance.activeSave.pF5T_Unlocked = false;
         pF5T_Unlocked = false;
+        SaveManager.instance.activeSave.settings_WelcomePopUp = true;
+        settings_WelcomePopUp = true;
 
 
         SaveManager.instance.Save();
@@ -447,6 +450,13 @@ public class GameManager : MonoBehaviour
     {
         SaveManager.instance.activeSave.settings_VoiceSwitch = !SaveManager.instance.activeSave.settings_VoiceSwitch;
         settings_VoiceSwitch = !settings_VoiceSwitch;
+
+    }
+
+    public void Settings_WelcomePopUp()
+    {
+        SaveManager.instance.activeSave.settings_WelcomePopUp = !SaveManager.instance.activeSave.settings_WelcomePopUp;
+        settings_WelcomePopUp = !settings_WelcomePopUp;
 
     }
 

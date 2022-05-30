@@ -9,6 +9,7 @@ public class CreditsManager : MonoBehaviour, IPointerDownHandler
 {
     public Image background;
     public GameObject textContainer;
+    public Transform creditsFinalPosition;
 
     public float fadeInSecs = 1f;
     public int textRollSpeed = 10;
@@ -55,7 +56,12 @@ public class CreditsManager : MonoBehaviour, IPointerDownHandler
 
     private void RollText()
     {
-        textContainer.transform.position = Vector2.MoveTowards(textContainer.transform.position, textContainer.transform.position + Vector3.up * 10, textRollSpeed * Time.deltaTime);
+        textContainer.transform.position = Vector2.MoveTowards(textContainer.transform.position, creditsFinalPosition.position, textRollSpeed * Time.deltaTime);
+        if (textContainer.transform.position == creditsFinalPosition.transform.position)
+        {
+            CloseCredits();
+        }
+
     }
 
     private void CloseCredits()
