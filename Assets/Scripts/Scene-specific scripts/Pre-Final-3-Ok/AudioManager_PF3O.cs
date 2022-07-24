@@ -95,8 +95,8 @@ public class AudioManager_PF3O : MonoBehaviour
     {
         if (SaveManager.instance.activeSave.setHomeFromTower == true)
         {
-            audioClips.Remove(audioClips[1]);
-        } else audioClips.Remove(audioClips[0]);
+            audioClips.Remove(audioClips[0]);
+        } else audioClips.Remove(audioClips[1]);
     }
 
 }

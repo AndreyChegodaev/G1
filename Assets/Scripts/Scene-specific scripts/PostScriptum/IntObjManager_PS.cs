@@ -63,7 +63,7 @@ public class IntObjManager_PS : MonoBehaviour
 
                 AudioManager_PS.instance.audioSource.Stop();
                 princess.GetComponent<PrincessMonolog_PS>().TaskOnClick();
-                gameObject.GetComponent<PageTurner>().TaskOnClick();
+                gameObject.GetComponent<BookCloser>().TaskOnClick();
                
                 
                 if (gameObject == choice1)

@@ -9,13 +9,18 @@ public class MovementManager : MonoBehaviour
     private int spawnIndex = 0;
     //[SerializeField] public Button nextButton;
 
-    private void Start()
+    private void Update()
     {
-        movements[0].SetActive(true);
-        //nextButton.onClick.AddListener(TaskOnClick);
+        if (BookManager_Page1.instance.bookShowFirstIllustration == true && BookManager_Page1.instance.bookShowOther == true)
+        {
+            movements[0].SetActive(true);
+            //nextButton.onClick.AddListener(TaskOnClick);
+        } 
+
     }
     public void TaskOnClick()
     {
+        BookManager_Page1.instance.bookShowFirstIllustration = false;
         spawnIndex++;
                     
         movements[spawnIndex].SetActive(true);

@@ -13,11 +13,13 @@ public class CurtainManager : MonoBehaviour
     void Start()
     {
         curtainRight.canvasRenderer.SetAlpha(1f);
-        MakeVisible();
+        StartCoroutine(MakeVisible());
+
     }
 
-    public void MakeVisible()
+    IEnumerator MakeVisible()
     {
+        yield return new WaitForSeconds(1f);
         curtainRight.CrossFadeAlpha(0f, timer, false);
     }
 

@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SelectPageCameraMover : MonoBehaviour
 {
-    
+    public static SelectPageCameraMover instance;
+   
     public Camera mainCamera;
     public Transform cameraFinalPosition;
     public float followSpeed = 3f;
@@ -14,6 +15,11 @@ public class SelectPageCameraMover : MonoBehaviour
     private float rotationSpeed;
     private bool flag1 = false; // on when the button is pressed
     private float elapsedTime;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
 
     private void Start()

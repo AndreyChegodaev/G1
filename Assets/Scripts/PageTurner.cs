@@ -12,7 +12,7 @@ public class PageTurner : MonoBehaviour
     
     public int timer;
     public Image curtain;
-    public GameObject turningPageAnimation;
+    public GameObject turningPage;
     public string sceneName;
     public Camera illustrationCamera;
 
@@ -41,8 +41,9 @@ public class PageTurner : MonoBehaviour
 
     IEnumerator TurnPageAnimation()
     {
-        turningPageAnimation.SetActive(true);
-        yield return new WaitForSeconds(timer-1);
+        turningPage.GetComponent<Animator>().SetBool("IsTurning", true);
+        turningPage.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(sceneName);
 
 

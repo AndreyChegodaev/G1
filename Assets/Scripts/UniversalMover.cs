@@ -25,7 +25,7 @@ public class UniversalMover : MonoBehaviour
 	}
 
 
-	void Move()
+	public void Move()
 	{
 		transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 

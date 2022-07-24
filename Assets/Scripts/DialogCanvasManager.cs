@@ -20,7 +20,12 @@ public class DialogCanvasManager : MonoBehaviour
     public void StopDialog()
     {
         dialogCanvas.SetActive(false);
-        PageTurnerForDialog.instance.TaskOnClick();
+        if (SaveManager.instance.activeSave.currentLevel == "Page6v2" || SaveManager.instance.activeSave.currentLevel == "Page6.5A" || SaveManager.instance.activeSave.currentLevel == "Page11A")
+        {
+            PageTurnerForDialog.instance.TaskOnClick();
+        }
+        else BookCloser.instance.TaskOnClick();
+        //PageTurnerForDialog.instance.TaskOnClick();
     }
 
 }
