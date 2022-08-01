@@ -7,6 +7,7 @@ public class MoveToClick : MonoBehaviour
     public float speed = 5f;
     public Camera illustrationCamera;
     private Vector3 target;
+    private GameObject[] boarders;
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,10 @@ public class MoveToClick : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        if (target == transform.position)
+        {
+            gameObject.GetComponent<Animator>().SetFloat("Speed", 0);
+        }
     }
 
 
@@ -51,9 +56,23 @@ public class MoveToClick : MonoBehaviour
     {
         if (collision.gameObject.tag == "IllustrationFrame")
         {
+            boarders = GameObject.FindGameObjectsWithTag("IllustrationFrame");
+            foreach (GameObject boarder in boarders)
+            {
+                boarder.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            }
+
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "IllustrationFrame")
+        {
             gameObject.GetComponent<Animator>().SetFloat("Speed", 0);
             target = transform.position;
             Debug.Log("Collision: Princess/Frame");
         }
+
     }
 }
