@@ -7,7 +7,7 @@ public class MoveToClick : MonoBehaviour
     public float speed = 5f;
     public Camera illustrationCamera;
     private Vector3 target;
-    private GameObject[] boarders;
+    private GameObject[] borders;
     
     // Start is called before the first frame update
     void Start()
@@ -56,10 +56,10 @@ public class MoveToClick : MonoBehaviour
     {
         if (collision.gameObject.tag == "IllustrationFrame")
         {
-            boarders = GameObject.FindGameObjectsWithTag("IllustrationFrame");
-            foreach (GameObject boarder in boarders)
+            borders = GameObject.FindGameObjectsWithTag("IllustrationFrame");
+            foreach (GameObject border in borders)
             {
-                boarder.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+                border.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
             }
 
         }

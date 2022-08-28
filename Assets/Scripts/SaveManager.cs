@@ -40,6 +40,13 @@ public class SaveManager : MonoBehaviour
     {
 
     }
+    public void Intro()
+    {
+        activeSave.settings_FullIntro = !activeSave.settings_FullIntro;
+        Save();
+
+    }
+
 
     public void Save()
     {
@@ -117,6 +124,7 @@ public class SaveData
     public bool settings_MusicSwitch = true;
     public bool settings_VoiceSwitch = true;
     public bool settings_WelcomePopUp = true;
+    public bool settings_FullIntro;
 
 
     public bool f1B_Unlocked = false;
