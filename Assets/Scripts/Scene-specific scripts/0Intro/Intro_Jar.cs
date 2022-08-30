@@ -11,7 +11,7 @@ public class Intro_Jar : MonoBehaviour
     public bool waterInJar;
     public bool magicInJar;
 
-    private int ingridientsInJar;
+    public int ingridientsInJar;
     public bool jarIsReady;
 
 

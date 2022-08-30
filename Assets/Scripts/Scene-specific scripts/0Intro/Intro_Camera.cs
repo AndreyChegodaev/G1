@@ -45,7 +45,7 @@ public class Intro_Camera : MonoBehaviour
             {
                 t += Time.deltaTime / transitionTime;
             }
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, cameraPositionFinish, transitionTime * Time.deltaTime);
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, cameraPositionFinish, (transitionTime+1) * Time.deltaTime);
 
         }
 
