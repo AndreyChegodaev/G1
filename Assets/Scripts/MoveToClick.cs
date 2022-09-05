@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class MoveToClick : MonoBehaviour
 {
+    public static MoveToClick instance;
     public float speed = 5f;
-    public Camera illustrationCamera;
+    private Camera illustrationCamera;
     private Vector3 target;
     private GameObject[] borders;
-    
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         target = transform.position;
+        GetComponent<MoveToClick>().illustrationCamera = GameObject.Find("Illustration Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -65,7 +72,7 @@ public class MoveToClick : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "IllustrationFrame")
         {
