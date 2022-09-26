@@ -18,6 +18,8 @@ public class IntObjManager_Page35 : MonoBehaviour
     private GameObject choice1;
     private GameObject choice2;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class IntObjManager_Page35 : MonoBehaviour
         audioSource.clip = audioOnHover; 
         
         renderer = GetComponent<SpriteRenderer>();
+        renderer.enabled = false;
         renderer.color = initialColor;
 
         choice1 = GameObject.Find("Finger");
@@ -50,6 +53,7 @@ public class IntObjManager_Page35 : MonoBehaviour
     {
         if (flag == true) 
         {
+            renderer.enabled = true;
             renderer.color = hoverColor;
             TooltipSystem.Show(content, header);
 
@@ -85,6 +89,7 @@ public class IntObjManager_Page35 : MonoBehaviour
         if (flag == true)
         {
             renderer.color = initialColor;
+            renderer.enabled = false;
             TooltipSystem.Hide();
             audioSource.Stop();
         }

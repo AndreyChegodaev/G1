@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour
 
     public Camera illustrationCamera;
     public GameObject[] cameraPositions;
-    public int camFollowSpeed;
+    public float camFollowSpeed;
     public GameObject lens;
     public GameObject sepiaLayer;
     [Header("Usuallly, cameraPositions length - 1")]
@@ -28,7 +28,11 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        illustrationCamera.enabled = false;
+        if (SaveManager.instance.activeSave.currentLevel == "Page1")
+        {
+            illustrationCamera.enabled = false;
+        }
+
         currentCamPosition = 0;
     }
 
@@ -62,7 +66,7 @@ public class CameraManager : MonoBehaviour
         {
             illustrationCamera.transform.position = cameraPositions[currentCamPosition].transform.position;
             currentCamPosition++;
-            Debug.Log("current position " + currentCamPosition);
+            //Debug.Log("current position " + currentCamPosition);
         }
 
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6502027824231323906}
   - component: {fileID: 6502027824231323904}
   - component: {fileID: 6502027824231323905}
+  - component: {fileID: 6502027823759372965}
   m_Layer: 0
   m_Name: CurtainRight
   m_TagString: Untagged
@@ -34,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330.9605, y: -197.2414}
+  m_AnchoredPosition: {x: -340.5, y: -186.8}
   m_SizeDelta: {x: 14.3338, y: 7.0865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6502027824231323904
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9176471, g: 0.8431373, b: 0.7058824, a: 1}
+  m_Color: {r: 0.9433962, g: 0.87878907, b: 0.7689569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75,6 +76,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6502027823759372965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6502027824231323907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ed03ca711585642b5170cf91b57a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curtainRight: {fileID: 6502027824231323905}
+  timer: 2
 --- !u!1 &6502027824713658953
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +149,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &6502027824713658957
 MonoBehaviour:

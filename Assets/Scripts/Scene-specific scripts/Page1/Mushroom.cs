@@ -6,11 +6,16 @@ public class Mushroom : MonoBehaviour
 {
     public static Mushroom instance;
 
-    public bool collisionWithMushroom = false;
+    public bool collisionWithMushroom;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        collisionWithMushroom = false;
     }
 
     void Update()
@@ -25,4 +30,5 @@ public class Mushroom : MonoBehaviour
             collisionWithMushroom = true;
         }
     }
+
 }
