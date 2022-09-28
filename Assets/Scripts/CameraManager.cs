@@ -43,8 +43,11 @@ public class CameraManager : MonoBehaviour
         {
             illustrationCamera.enabled = true;
         }
-
-        illustrationCamera.transform.position = Vector3.MoveTowards(illustrationCamera.transform.position, cameraPositions[currentCamPosition].transform.position, camFollowSpeed * Time.deltaTime);
+        
+        if (currentCamPosition <= cameraPositions.Length - 1)
+        {
+            illustrationCamera.transform.position = Vector3.MoveTowards(illustrationCamera.transform.position, cameraPositions[currentCamPosition].transform.position, camFollowSpeed * Time.deltaTime);
+        }
 
         if (currentCamPosition == lensOnPosition)
         {
@@ -66,7 +69,7 @@ public class CameraManager : MonoBehaviour
         {
             illustrationCamera.transform.position = cameraPositions[currentCamPosition].transform.position;
             currentCamPosition++;
-            //Debug.Log("current position " + currentCamPosition);
+            //Debug.Log("current cam position " + currentCamPosition + " of " + cameraPositions.Length);
         }
 
 
