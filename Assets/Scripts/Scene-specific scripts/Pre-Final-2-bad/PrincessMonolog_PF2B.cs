@@ -9,6 +9,7 @@ public class PrincessMonolog_PF2B : MonoBehaviour
     //public Sprite princessTalking;
     AudioSource audioSource;
     private bool flag = false;
+    private bool exclamationSpawned = false; // 2. 
 
     // Start is called before the first frame update
 
@@ -22,6 +23,8 @@ public class PrincessMonolog_PF2B : MonoBehaviour
 
     private void Update()
     {
+        transform.position = GameObject.FindGameObjectWithTag("Princess").transform.position + Vector3.up * 2; // 3.
+
         if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
         {
             audioSource.mute = true;
@@ -39,6 +42,12 @@ public class PrincessMonolog_PF2B : MonoBehaviour
         yield return new WaitForSeconds(AudioManager_PF2B.instance.audioSource.clip.length);
         flag = true;
         exclamationMark.SetActive(true);
+
+        if (exclamationSpawned == false) // 4.
+        {
+            Instantiate(exclamationMark, GameObject.FindGameObjectWithTag("Princess").transform);
+            exclamationSpawned = true;
+        }
     }
 
 
@@ -56,5 +65,7 @@ public class PrincessMonolog_PF2B : MonoBehaviour
     {
         yield return new WaitForSeconds(princessLine.length);
         CCManager.instance.Hide();
+        GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false; // 5.
+
     }
 }
