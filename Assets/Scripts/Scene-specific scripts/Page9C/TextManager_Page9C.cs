@@ -27,10 +27,13 @@ public class TextManager_Page9C: MonoBehaviour
 
     }
     public void TaskOnClick()
-    { 
+    {
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
         int i = spawnIndex++;            
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        }
 
     }
 

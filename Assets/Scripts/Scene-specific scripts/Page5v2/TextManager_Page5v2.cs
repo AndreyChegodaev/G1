@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextManager_Page5v2: MonoBehaviour 
+public class TextManager_Page5v2 : MonoBehaviour
 {
     public List<GameObject> paragraphs = new List<GameObject>();
     private int spawnIndex = 0;
@@ -26,9 +26,13 @@ public class TextManager_Page5v2: MonoBehaviour
 
     public void TaskOnClick()
     {
-        int i = spawnIndex++;
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
+            int i = spawnIndex++;
 
-        paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        }
+
 
     }
 }

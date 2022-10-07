@@ -44,7 +44,6 @@ public class ScriptScene_Page35 : MonoBehaviour
         {
             anim.SetBool("ForkPicked", true);
             anim.SetFloat("Speed", 0);
-
         }
     }
 

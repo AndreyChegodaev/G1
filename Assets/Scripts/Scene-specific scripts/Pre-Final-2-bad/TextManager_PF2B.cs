@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextManager_PF2B: MonoBehaviour 
+public class TextManager_PF2B : MonoBehaviour
 {
     public List<GameObject> paragraphs = new List<GameObject>();
     private int spawnIndex = 0;
@@ -19,15 +19,19 @@ public class TextManager_PF2B: MonoBehaviour
 
     }
     public void TaskOnClick()
-    { 
-        int i = spawnIndex++;            
+    {
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
+            int i = spawnIndex++;
 
-        paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-        {           
-            paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+            {
+                paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            }
         }
+
     }
 
 
@@ -37,6 +41,6 @@ public class TextManager_PF2B: MonoBehaviour
 
         paragraphs[1].transform.position = paragraphs[0].transform.position + Vector3.down * (paragraphs[0].GetComponent<Collider2D>().bounds.extents.y + paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + .1f);
         paragraphs[2].transform.position = paragraphs[1].transform.position + Vector3.down * (paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + paragraphs[2].GetComponent<Collider2D>().bounds.extents.y + .1f);
-     
+
     }
 }

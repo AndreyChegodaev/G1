@@ -28,7 +28,9 @@ public class TextManager_PF1B: MonoBehaviour
 
     }
     public void TaskOnClick()
-    { 
+    {
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
         int i = spawnIndex++;            
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
@@ -37,6 +39,9 @@ public class TextManager_PF1B: MonoBehaviour
         {
             paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
         }
+        }
+
+
 
     }
 

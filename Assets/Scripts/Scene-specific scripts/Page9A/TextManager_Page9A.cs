@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextManager_Page9A: MonoBehaviour 
+public class TextManager_Page9A : MonoBehaviour
 {
     public List<GameObject> paragraphs = new List<GameObject>();
     private int spawnIndex = 0;
@@ -24,36 +24,41 @@ public class TextManager_Page9A: MonoBehaviour
         Lineup();
 
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-       
+
         nextButton.onClick.AddListener(TaskOnClick);
     }
 
     public void TaskOnClick()
-    { 
-        int i = spawnIndex++;            
-
-        paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-
-/*        if (SaveManager.instance.activeSave.waitAtTheDoor == 1)
+    {
+        if (spawnIndex <= paragraphs.Count - 1)
         {
-            if (paragraphs[1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-            {
-                foreach (GameObject paragraph in paragraphs)
-                {
-                    paragraph.GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-                }
-            }
+            int i = spawnIndex++;
+
+            paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
         }
-        else if(SaveManager.instance.activeSave.waitAtTheDoor > 1 && SaveManager.instance.activeSave.waitAtTheDoor < 4)
-        {
-            if (paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-            {
-                foreach (GameObject paragraph in paragraphs)
+
+
+
+        /*        if (SaveManager.instance.activeSave.waitAtTheDoor == 1)
                 {
-                    paragraph.GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+                    if (paragraphs[1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+                    {
+                        foreach (GameObject paragraph in paragraphs)
+                        {
+                            paragraph.GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+                        }
+                    }
                 }
-            }
-        }*/
+                else if(SaveManager.instance.activeSave.waitAtTheDoor > 1 && SaveManager.instance.activeSave.waitAtTheDoor < 4)
+                {
+                    if (paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+                    {
+                        foreach (GameObject paragraph in paragraphs)
+                        {
+                            paragraph.GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+                        }
+                    }
+                }*/
 
     }
 
@@ -64,14 +69,14 @@ public class TextManager_Page9A: MonoBehaviour
         paragraphs.RemoveAll(item => item == null);
     }
 
-/*    void ExceptionsChoices()
-    {
-        if (SaveManager.instance.activeSave.hasFinger == false)
+    /*    void ExceptionsChoices()
         {
-            paragraphs[6] = null;
-            paragraphs[7] = null;
-        }
-    }*/
+            if (SaveManager.instance.activeSave.hasFinger == false)
+            {
+                paragraphs[6] = null;
+                paragraphs[7] = null;
+            }
+        }*/
 
     void ExceptionsParagraphs()
     {
@@ -114,11 +119,11 @@ public class TextManager_Page9A: MonoBehaviour
 
     void Lineup()
     {
-        foreach (GameObject paragraph in paragraphs) 
+        foreach (GameObject paragraph in paragraphs)
         {
-            paragraphs[lineupIndex].transform.position = paragraphs[lineupIndex-1].transform.position + Vector3.down * (paragraphs[lineupIndex-1].GetComponent<Collider2D>().bounds.extents.y + paragraphs[lineupIndex].GetComponent<Collider2D>().bounds.extents.y + .2f);
-           
-            if (lineupIndex < paragraphs.Count-1)
+            paragraphs[lineupIndex].transform.position = paragraphs[lineupIndex - 1].transform.position + Vector3.down * (paragraphs[lineupIndex - 1].GetComponent<Collider2D>().bounds.extents.y + paragraphs[lineupIndex].GetComponent<Collider2D>().bounds.extents.y + .2f);
+
+            if (lineupIndex < paragraphs.Count - 1)
             {
                 lineupIndex++;
             }

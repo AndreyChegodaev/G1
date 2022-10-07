@@ -18,9 +18,14 @@ public class TextManager_WD: MonoBehaviour
         nextButton.onClick.AddListener(TaskOnClick);
     }
     public void TaskOnClick()
-    { 
-        int i = spawnIndex++; 
-        paragraphs[i].SetActive(true);
-        pictures[i].SetActive(true);
+    {
+
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
+            int i = spawnIndex++;
+            paragraphs[i].SetActive(true);
+            pictures[i].SetActive(true);
+        }
+
     }
 }

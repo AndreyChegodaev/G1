@@ -85,8 +85,11 @@ public class ScriptScene_Page1 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, princessPositions[currentPrincessPosition].position, princessSpeed * Time.deltaTime);
-        
+        if (currentPrincessPosition <= princessPositions.Length - 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, princessPositions[currentPrincessPosition].position, princessSpeed * Time.deltaTime);
+        }
+
         if (collisionWithMushroom == true)
         {
             princessSpeed = 0;

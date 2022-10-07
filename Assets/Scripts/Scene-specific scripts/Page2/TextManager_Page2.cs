@@ -26,10 +26,14 @@ public class TextManager_Page2: MonoBehaviour
         nextButton.onClick.AddListener(TaskOnClick);
     }
     public void TaskOnClick()
-    { 
+    {
+        if (spawnIndex <= paragraphs.Count - 1)
+        {
         int i = spawnIndex++;
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        }
+
     }
 
     void Lineup()
