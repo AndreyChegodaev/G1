@@ -14,7 +14,9 @@ public class DryTree : MonoBehaviour
     {
         finalPosition = new Vector2 (transform.position.x, transform.position.y - movementDistance);
         sprite = gameObject.GetComponent<SpriteRenderer>();
-        sprite.enabled = false;
+        
+        if (SaveManager.instance.activeSave.onTree == false) sprite.enabled = false;
+        else sprite.enabled = true;
     }
 
     // Update is called once per frame

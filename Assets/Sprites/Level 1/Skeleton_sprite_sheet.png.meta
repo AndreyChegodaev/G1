@@ -7,13 +7,16 @@ TextureImporter:
     second: Skeleton_sprite_sheet_0
   - first:
       213: 8953693750612855625
-    second: Skeleton_sprite_sheet_1
+    second: Skeleton_sprite_hidden_ringed
   - first:
       213: 7048490122135539743
-    second: Skeleton_sprite_sheet_1
+    second: Skeleton_sprite_hidden_ringed
   - first:
       213: -3992854448693344850
-    second: Skeleton_sprite_sheet_3
+    second: Skeleton_sprite_hidden_ringless
+  - first:
+      213: 2350902804565353574
+    second: Skeleton_sprite_hidden_fingerless
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -143,8 +146,8 @@ TextureImporter:
         y: 207
         width: 104
         height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.49519232, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,6 +239,69 @@ TextureImporter:
       bones: []
       spriteID: e032dec632066fea0800000000000000
       internalID: -5839374161571667186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_sprite_hidden_ringed
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 60
+        width: 101
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f101dbceb6441d160800000000000000
+      internalID: 7048490122135539743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_sprite_hidden_ringless
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 60
+        width: 101
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea58bc1b8088698c0800000000000000
+      internalID: -3992854448693344850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_sprite_hidden_fingerless
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 60
+        width: 101
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664669725a510a020800000000000000
+      internalID: 2350902804565353574
       vertices: []
       indices: 
       edges: []

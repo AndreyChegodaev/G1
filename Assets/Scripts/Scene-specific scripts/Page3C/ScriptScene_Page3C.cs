@@ -19,7 +19,19 @@ public class ScriptScene_Page3C : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed * 5;
-        currentPrincessPosition = 0;
+        
+        if (SaveManager.instance.activeSave.onTree == true)
+        {
+            currentPrincessPosition = 0;
+        }
+
+        else
+        {
+            currentPrincessPosition = 1;
+            princessStartPosition = princessPositions[1];
+            skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", true);
+        }
+
         transform.position = princessStartPosition.position;
     }
     private void Update()
