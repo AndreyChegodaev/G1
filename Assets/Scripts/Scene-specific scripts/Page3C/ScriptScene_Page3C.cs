@@ -9,6 +9,7 @@ public class ScriptScene_Page3C : MonoBehaviour
     public Transform princessStartPosition; // have to do it because of a bug with Full sreen 
     public Transform[] princessPositions;
     public GameObject skeleton;
+    public Camera illustrationCamera;
 
     private int currentPrincessPosition;
     private float princessSpeed;
@@ -23,6 +24,7 @@ public class ScriptScene_Page3C : MonoBehaviour
         if (SaveManager.instance.activeSave.onTree == true)
         {
             currentPrincessPosition = 0;
+            StartCoroutine(Shake());
         }
 
         else
@@ -81,5 +83,11 @@ public class ScriptScene_Page3C : MonoBehaviour
             transform.position = princessPositions[currentPrincessPosition].transform.position;
             currentPrincessPosition++;
         }
+    }
+
+    IEnumerator Shake()
+    {
+        yield return new WaitForSeconds(0.8f);
+        illustrationCamera.GetComponent<StressReceiver>().InduceStress(1f);
     }
 }

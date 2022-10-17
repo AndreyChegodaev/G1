@@ -9,6 +9,7 @@ public class BookManager_Page1 : MonoBehaviour
     public GameObject bookUI;
     public GameObject bookText;
     public AudioClip openBook;
+    public Camera mainCamera;
     //public AudioClip foldingPage;
 
     public bool bookShowFirstIllustration = false;
@@ -30,7 +31,7 @@ public class BookManager_Page1 : MonoBehaviour
         gameObject.GetComponent<AudioSource>().clip = openBook;
         gameObject.GetComponent<AudioSource>().Play();
         StartCoroutine(ShowUI());
-
+        StartCoroutine(Shake());
     }
 
     // Update is called once per frame
@@ -46,5 +47,11 @@ public class BookManager_Page1 : MonoBehaviour
         bookShowOther = true;
         bookUI.SetActive(true);
         bookText.SetActive(true);
+    }
+
+    IEnumerator Shake()
+    {
+        yield return new WaitForSeconds(1.05f);
+        mainCamera.GetComponent<StressReceiver>().InduceStress(1);
     }
 }

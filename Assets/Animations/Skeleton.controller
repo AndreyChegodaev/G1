@@ -170,6 +170,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Skeleton_Ringless
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SkeletonHidden
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4227000189540590709}
   m_Solo: 0
@@ -470,6 +473,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Skeleton_Fingerless
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: SkeletonHidden
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8850280606442731533}
