@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class IntObjManager_Page2 : MonoBehaviour
 {
@@ -28,9 +27,10 @@ public class IntObjManager_Page2 : MonoBehaviour
         audioSource.clip = audioOnHover; 
         
         renderer = GetComponent<SpriteRenderer>();
+        renderer.enabled = false;
         renderer.color = initialColor;
 
-        choice1 = GameObject.Find("Skeleton");
+        choice1 = GameObject.Find("Arm");
         choice2 = GameObject.Find("Finger");
         choice3 = GameObject.Find("Ring");
     }
@@ -54,6 +54,7 @@ public class IntObjManager_Page2 : MonoBehaviour
     {
         if (flag == true) 
         {
+            renderer.enabled = true;
             renderer.color = hoverColor;
             TooltipSystem.Show(content, header);
 
@@ -96,6 +97,7 @@ public class IntObjManager_Page2 : MonoBehaviour
         if (flag == true)
         {
             renderer.color = initialColor;
+            renderer.enabled = false;
             TooltipSystem.Hide();
             audioSource.Stop();
         }

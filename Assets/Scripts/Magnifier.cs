@@ -30,7 +30,7 @@ public class Magnifier : MonoBehaviour
 
         if (hit.collider && magnifierReady == true)
         {
-            if (hit.collider.name == "Magnifier" || hit.collider.name == "Ring" || hit.collider.name == "Finger" )
+            if (hit.collider.name == "Magnifier" || hit.collider.name == "Ring" || hit.collider.name == "Finger" || hit.collider.name == "Arm")
             {
                 sprite.enabled = true;
             }
