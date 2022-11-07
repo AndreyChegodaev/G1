@@ -22,7 +22,7 @@ public class PrincessMonolog_Page4 : MonoBehaviour
 
     private void Update()
     {
-        transform.position = GameObject.FindGameObjectWithTag("Princess").transform.position + Vector3.up * 2; // 3.
+        transform.position = GameObject.FindGameObjectWithTag("Princess").transform.position + Vector3.up * 2.5f; // 3.
 
         if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
         {

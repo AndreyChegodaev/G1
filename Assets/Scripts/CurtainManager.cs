@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CurtainManager : MonoBehaviour
 {
     public Image curtainRight; 
-    public int timer;
+    public float timer;
 
 
     // Start is called before the first frame update

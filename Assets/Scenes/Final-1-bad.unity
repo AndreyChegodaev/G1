@@ -555,7 +555,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
@@ -593,7 +593,7 @@ MonoBehaviour:
   curtain: {fileID: 0}
   turningPage: {fileID: 0}
   sceneName: Page5
-  illustrationCamera: {fileID: 155974880}
+  illustrationCamera: {fileID: 0}
 --- !u!61 &80226772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -690,7 +690,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -772,7 +772,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -795,16 +795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &155974875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3500094960539602103, guid: 710c1add2123da34881854d45047b1c3, type: 3}
-  m_PrefabInstance: {fileID: 3500094960660836460}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &155974880 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3500094960539602060, guid: 710c1add2123da34881854d45047b1c3, type: 3}
-  m_PrefabInstance: {fileID: 3500094960660836460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &173584882
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +947,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
@@ -1039,7 +1029,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
   m_FlipX: 0
@@ -1267,7 +1257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1473,7 +1463,7 @@ PrefabInstance:
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: illustrationCamera
       value: 
-      objectReference: {fileID: 155974880}
+      objectReference: {fileID: 0}
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: turningPageAnimation
       value: 
@@ -1507,7 +1497,7 @@ MonoBehaviour:
   curtain: {fileID: 0}
   turningPage: {fileID: 0}
   sceneName: 
-  illustrationCamera: {fileID: 155974880}
+  illustrationCamera: {fileID: 0}
 --- !u!61 &314632832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1940,7 +1930,7 @@ PrefabInstance:
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: illustrationCamera
       value: 
-      objectReference: {fileID: 155974880}
+      objectReference: {fileID: 0}
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: turningPageAnimation
       value: 
@@ -2325,11 +2315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.26136366
+      value: 0.11843519
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.y
-      value: 2.3352273
+      value: 1.0809524
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2341,11 +2331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -945.4545
+      value: -1128.403
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 961.36365
+      value: 58.30655
       objectReference: {fileID: 0}
     - target: {fileID: 3917211001291765147, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Name
@@ -3312,7 +3302,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
@@ -4034,7 +4024,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4240,7 +4230,7 @@ PrefabInstance:
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: illustrationCamera
       value: 
-      objectReference: {fileID: 155974880}
+      objectReference: {fileID: 0}
     - target: {fileID: 724517885980646602, guid: 76ffe25400037594f83001d604da5a15, type: 3}
       propertyPath: turningPageAnimation
       value: 
@@ -4304,7 +4294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 0.23137257, g: 0.21960786, b: 0.16862746, a: 1}
   m_FlipX: 0
@@ -5077,22 +5067,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b23fc26b9cc69bd499dafaeb55ddf464, type: 3}
---- !u!4 &1742270124 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3120129540928145747, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
-  m_PrefabInstance: {fileID: 3120129540385499135}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1742270125 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3120129540928145746, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
-  m_PrefabInstance: {fileID: 3120129540385499135}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb496e190a650a14c9c9184d94f3afd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1833107193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3500094960834136080, guid: 710c1add2123da34881854d45047b1c3, type: 3}
@@ -5287,7 +5261,7 @@ Transform:
   - {fileID: 1078013449}
   - {fileID: 1213855001}
   - {fileID: 1648378562}
-  - {fileID: 1742270124}
+  - {fileID: 3120129540385499136}
   - {fileID: 993038442}
   - {fileID: 1601666773}
   - {fileID: 2058952273}
@@ -5562,7 +5536,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
@@ -5644,7 +5618,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f944a781ef4ab743a14708f4a2335c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6103,7 +6077,7 @@ MonoBehaviour:
   curtain: {fileID: 0}
   turningPage: {fileID: 0}
   sceneName: Page6.5A
-  illustrationCamera: {fileID: 155974880}
+  illustrationCamera: {fileID: 0}
 --- !u!114 &582357557936497470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6229,7 +6203,7 @@ PrefabInstance:
     - target: {fileID: 3120129540928145746, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
       propertyPath: movements.Array.data[1]
       value: 
-      objectReference: {fileID: 155974875}
+      objectReference: {fileID: 0}
     - target: {fileID: 3120129540928145747, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6282,8 +6256,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6715968730113050652, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
+--- !u!4 &3120129540385499136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6715968730113050654, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
+  m_PrefabInstance: {fileID: 3120129540385499135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3275856118255821991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6749,7 +6732,7 @@ PrefabInstance:
     - target: {fileID: 6026930457517638400, guid: aabb6b0ca338d014da18c742cc0194d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 1742270125}
+      objectReference: {fileID: 0}
     - target: {fileID: 6026930457517638400, guid: aabb6b0ca338d014da18c742cc0194d5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartAudio

@@ -18,24 +18,24 @@ public class ScriptScene_Page4 : MonoBehaviour
 
     void Start()
     {
-        if (SaveManager.instance.activeSave.onTree == true & SaveManager.instance.activeSave.hasFinger == true)
+        if (SaveManager.instance.activeSave.onTree == true && SaveManager.instance.activeSave.hasFinger == true)
         {
             skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", false);
             skeleton.GetComponent<Animator>().SetBool("Skeleton_Fingerless", true);
         }
-        else if (SaveManager.instance.activeSave.hasFinger == false)
+        else if (SaveManager.instance.activeSave.onTree == true && SaveManager.instance.activeSave.hasFinger == false)
         {
             skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", false);
             skeleton.GetComponent<Animator>().SetBool("Skeleton_Ringless", true);
         }
 
-        if (SaveManager.instance.activeSave.onTree == false & SaveManager.instance.activeSave.hasFinger == true)
+        if (SaveManager.instance.activeSave.onTree == false && SaveManager.instance.activeSave.hasFinger == true)
         {
             skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", true);
             skeleton.GetComponent<Animator>().SetBool("Skeleton_Fingerless", true);
         }
 
-        else if (SaveManager.instance.activeSave.hasFinger == false)
+        else if (SaveManager.instance.activeSave.onTree == false && SaveManager.instance.activeSave.hasFinger == false)
         {
             skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", true);
             skeleton.GetComponent<Animator>().SetBool("Skeleton_Ringless", true);
