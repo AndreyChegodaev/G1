@@ -9,18 +9,31 @@ public class ScriptScene_Page5 : MonoBehaviour
     public Transform princessStartPosition; // have to do it because of a bug with Full sreen 
     public Transform[] princessPositions;
 
+    public Camera illustraionCamera;
+
     private int currentPrincessPosition;
     private float princessSpeed;
     private bool shrug;
     private bool princessIsCreated = false;
     private Animator anim;
 
+
     void Start()
     {
+        if (SaveManager.instance.activeSave.dejaVu == 0)
+        {
+            currentPrincessPosition = 0;
+        } else
+        {
+            currentPrincessPosition = 1;
+            princessStartPosition = princessPositions[0];
+        }
+
+
+
         shrug = false;
         anim = gameObject.GetComponent<Animator>();
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed;
-        currentPrincessPosition = 0;
         transform.position = princessStartPosition.position;
 
         gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
@@ -40,7 +53,7 @@ public class ScriptScene_Page5 : MonoBehaviour
 
         else if (currentPrincessPosition == 1)
         {
-            gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+            //gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
             anim.SetFloat("Speed", 70);
             anim.SetFloat("Horizontal", 1);
             anim.SetFloat("Vertical", -0.5f);
@@ -52,7 +65,7 @@ public class ScriptScene_Page5 : MonoBehaviour
             anim.SetFloat("Speed", 0);
         }
 
-        if (transform.position == princessPositions[currentPrincessPosition].position && currentPrincessPosition == CameraManager.instance.lensOnPosition)
+        if (transform.position == princessPositions[currentPrincessPosition].position && currentPrincessPosition == CameraManager_Page5.instance.lensOnPosition)
         {
             SwapPrincesses();
         }
@@ -109,7 +122,7 @@ public class ScriptScene_Page5 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shrug")
         {
-            Debug.Log("Shrug");
+           // Debug.Log("Shrug");
             shrug = true;
         }
     }
