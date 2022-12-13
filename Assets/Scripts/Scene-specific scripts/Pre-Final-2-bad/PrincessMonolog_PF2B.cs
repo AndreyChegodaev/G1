@@ -28,17 +28,26 @@ public class PrincessMonolog_PF2B : MonoBehaviour
         if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
         {
             audioSource.mute = true;
-        }
-        else audioSource.mute = false;
+        } else audioSource.mute = false;
 
         if (AudioManager_PF2B.instance.currentTrack == AudioManager_PF2B.instance.audioClips.Count - 2)
         {
             StartCoroutine(WaitForTrackToEnd());
+        } else if (AudioManager_PF2B.instance.currentTrack != AudioManager_PF2B.instance.audioClips.Count - 2)
+        {
+            StopAllCoroutines();
+            flag = false;
+            exclamationSpawned = true;
+            if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+            {
+                GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
 
     IEnumerator WaitForTrackToEnd()
     {
+        
         yield return new WaitForSeconds(AudioManager_PF2B.instance.audioSource.clip.length);
         flag = true;
         exclamationMark.SetActive(true);

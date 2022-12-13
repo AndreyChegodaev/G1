@@ -14,7 +14,9 @@ public class SelectPageCameraMover : MonoBehaviour
     public GameObject selectPageUI;
     private float rotationSpeed;
     private bool flag1 = false; // on when the button is pressed
+    private bool hasShaken;
     private float elapsedTime;
+    private GameObject book;
 
     public void Awake()
     {
@@ -25,6 +27,20 @@ public class SelectPageCameraMover : MonoBehaviour
     private void Start()
     {
         rotationSpeed = followSpeed / 4;
+        book = GameObject.FindGameObjectWithTag("Book");
+    }
+
+    private void Update()
+    {
+       if (book.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("book_close"))
+        {
+            if (hasShaken == false)
+            {
+                StartCoroutine(Shake());
+                hasShaken = !hasShaken;
+            }
+
+        }
     }
 
     private void LateUpdate()
@@ -50,5 +66,11 @@ public class SelectPageCameraMover : MonoBehaviour
     public void TaskOnClick()
     {
         flag1 = true;
+    }
+
+    IEnumerator Shake()
+    {
+        yield return new WaitForSeconds(1);
+        gameObject.GetComponent<StressReceiver>().InduceStress(1.2f);
     }
 }
