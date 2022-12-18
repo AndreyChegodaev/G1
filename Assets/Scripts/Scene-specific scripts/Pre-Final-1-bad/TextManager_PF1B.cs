@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextManager_PF1B: MonoBehaviour 
+public class TextManager_PF1B : MonoBehaviour
 {
     public List<GameObject> paragraphs = new List<GameObject>();
     private int spawnIndex = 0;
@@ -31,16 +31,17 @@ public class TextManager_PF1B: MonoBehaviour
     {
         if (spawnIndex <= paragraphs.Count - 1)
         {
-        int i = spawnIndex++;            
+        spawnIndex++;
 
-        paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            paragraphs[spawnIndex].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
-        if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
-        {
-            paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
+            {
+                paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            }
         }
-        }
 
+        //Debug.Log(spawnIndex);
 
 
     }

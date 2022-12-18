@@ -74,7 +74,9 @@ public class PrincessMonolog_PF2B : MonoBehaviour
     {
         yield return new WaitForSeconds(princessLine.length);
         CCManager.instance.Hide();
-        GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false; // 5.
-
+        if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+        {
+            GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

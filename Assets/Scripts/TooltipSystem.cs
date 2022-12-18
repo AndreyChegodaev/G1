@@ -15,7 +15,8 @@ public class TooltipSystem : MonoBehaviour
 
     public void Start()
     {
-        Hide();
+        if (instance.tooltip.gameObject != null) // added recently - maybe a mistske
+            Hide();
     }
 
     public static void Show(string content, string header = "")

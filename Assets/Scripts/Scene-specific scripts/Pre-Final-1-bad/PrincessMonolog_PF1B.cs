@@ -29,12 +29,21 @@ public class PrincessMonolog_PF1B : MonoBehaviour
         if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
         {
             audioSource.mute = true;
-        }
-        else audioSource.mute = false;
+        } else audioSource.mute = false;
 
         if (AudioManager_PF1B.instance.currentTrack == AudioManager_PF1B.instance.audioClips.Count - 2)
         {
             StartCoroutine(WaitForTrackToEnd());
+
+        } else if (AudioManager_PF1B.instance.currentTrack > AudioManager_PF1B.instance.audioClips.Count - 2)
+        {
+            StopAllCoroutines();
+            flag = false;
+            exclamationSpawned = true;
+            if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+            {
+                GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
 
@@ -53,7 +62,7 @@ public class PrincessMonolog_PF1B : MonoBehaviour
 
     void PrincessLineCondition()
     {
-       if (SaveManager.instance.activeSave.hasFinger == true)
+        if (SaveManager.instance.activeSave.hasFinger == true)
         {
             audioSource.clip = princessLines[0];
         }
@@ -75,7 +84,9 @@ public class PrincessMonolog_PF1B : MonoBehaviour
     {
         yield return new WaitForSeconds(audioSource.clip.length);
         CCManager_PF1B.instance.Hide();
-        GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false; // 5.
-
+            if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+            {
+                GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+            }
     }
 }

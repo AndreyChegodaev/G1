@@ -32,6 +32,8 @@ public class TextManager_PF2B : MonoBehaviour
             }
         }
 
+        //Debug.Log(spawnIndex);
+
     }
 
 
