@@ -7,6 +7,8 @@ public class FinalCameraMover : MonoBehaviour
 {
 
     public Camera mainCamera;
+    GameObject witchVision;
+
   
     //public float zoomSpeed;
     //public List<float> cameraSizes = new List<float>();
@@ -25,6 +27,9 @@ public class FinalCameraMover : MonoBehaviour
 
         forward.gameObject.SetActive(false);
         forward.onClick.AddListener(TaskOnClick);
+
+        witchVision = GameObject.Find("WitchVision");
+        witchVision.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,6 +56,11 @@ public class FinalCameraMover : MonoBehaviour
         if (i == 4)
         {
             GameManager.instance.FirstPlaytroughDone();
+        }
+
+        if (i == 5)
+        {
+            witchVision.SetActive(true);
         }
     }
 
