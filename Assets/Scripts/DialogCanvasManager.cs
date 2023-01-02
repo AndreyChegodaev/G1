@@ -21,7 +21,7 @@ public class DialogCanvasManager : MonoBehaviour
     {
         dialogCanvas.SetActive(false);
         // NOTE: Mind that the text in the quotation marks is case sensitive. E.g., "page6v2" or "page11a" won't work.
-        if (SaveManager.instance.activeSave.currentLevel == "Page6v2" || SaveManager.instance.activeSave.currentLevel == "Page6.5A" || SaveManager.instance.activeSave.currentLevel == "Page11A")
+        if (SaveManager.instance.activeSave.currentLevel == "Page6v2" || SaveManager.instance.activeSave.currentLevel == "Page65A" || SaveManager.instance.activeSave.currentLevel == "Page11A")
         {
             PageTurnerForDialog.instance.TaskOnClick();
         }
