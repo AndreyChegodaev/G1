@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127287208, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Pre-Final-4-goodish
+      value: PreFinal4goodish
       objectReference: {fileID: 0}
     - target: {fileID: 1127287208, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -664,11 +664,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!20 &155974880 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3500094960539602060, guid: 710c1add2123da34881854d45047b1c3, type: 3}
-  m_PrefabInstance: {fileID: 3500094960660836460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &391144521 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3313654382110581260, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
@@ -909,7 +904,7 @@ PrefabInstance:
     - target: {fileID: 3120129540928145746, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
       propertyPath: movements.Array.data[1]
       value: 
-      objectReference: {fileID: 1155243436}
+      objectReference: {fileID: 0}
     - target: {fileID: 3120129540928145747, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -960,6 +955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
+--- !u!4 &682268041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6715968730113050654, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
+  m_PrefabInstance: {fileID: 682268040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &697016714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,11 +1490,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6502027824713658952, guid: 1fc5b7f3623b5b5469ad8e45ac1b99c2, type: 3}
   m_PrefabInstance: {fileID: 1131250163}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1155243436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3500094960539602103, guid: 710c1add2123da34881854d45047b1c3, type: 3}
-  m_PrefabInstance: {fileID: 3500094960660836460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1292578892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1567,11 +1562,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3313654383189323116, guid: 887d3f19304ce2c4aba4c760f3c497f6, type: 3}
   m_PrefabInstance: {fileID: 51026016}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1407560866 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3120129540928145747, guid: 864a77959b8d7074698a5f44fde8018a, type: 3}
-  m_PrefabInstance: {fileID: 682268040}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515123022
 GameObject:
@@ -1778,9 +1768,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 337dbecaa351fba4f85824feaccef850, type: 3}
---- !u!224 &1654774065 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6502027824713658952, guid: 337dbecaa351fba4f85824feaccef850, type: 3}
+--- !u!4 &1654774065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1654774064}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1670349479 stripped
@@ -2129,7 +2119,7 @@ Transform:
   m_LocalPosition: {x: 24.393057, y: -2.285, z: -0.03599995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1407560866}
+  - {fileID: 682268041}
   - {fileID: 1648378562}
   - {fileID: 993038442}
   - {fileID: 1601666773}
@@ -2412,7 +2402,7 @@ PrefabInstance:
     - target: {fileID: 582357557936497469, guid: 41dfc6170666542408d9a0f58bfee5a2, type: 3}
       propertyPath: illustrationCamera
       value: 
-      objectReference: {fileID: 155974880}
+      objectReference: {fileID: 0}
     - target: {fileID: 582357557936497469, guid: 41dfc6170666542408d9a0f58bfee5a2, type: 3}
       propertyPath: turningPageAnimation
       value: 
@@ -2428,7 +2418,7 @@ PrefabInstance:
     - target: {fileID: 582357559724785001, guid: 41dfc6170666542408d9a0f58bfee5a2, type: 3}
       propertyPath: illustrationCamera
       value: 
-      objectReference: {fileID: 155974880}
+      objectReference: {fileID: 0}
     - target: {fileID: 582357559724785001, guid: 41dfc6170666542408d9a0f58bfee5a2, type: 3}
       propertyPath: turningPageAnimation
       value: 
