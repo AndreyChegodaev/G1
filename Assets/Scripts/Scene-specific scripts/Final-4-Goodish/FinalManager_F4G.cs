@@ -9,7 +9,7 @@ public class FinalManager_F4G : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SaveManager.instance.activeSave.dejaVu != 0)
+        if (SaveManager.instance.activeSave.dejaVu > 1)
         {
             positions[2].GetComponent<Renderer>().enabled = true;
             positions[3].GetComponent<Renderer>().enabled = false;

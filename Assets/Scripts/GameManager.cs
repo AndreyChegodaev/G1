@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
 
     public void SetActivePictureBad()
     {
-        if (killedByWitch == true)
+        if (SaveManager.instance.activeSave.killedByWitch == true)
         {
             SaveManager.instance.activeSave.activePicture = SaveData.ActivePicture.bad_ash;
             activePicture = ActivePicture.bad_ash;
@@ -171,13 +171,13 @@ public class GameManager : MonoBehaviour
 
     public void SetActivePictureOk()
     {
-        if (keptTheRing == true)
+        if (SaveManager.instance.activeSave.keptTheRing == true)
         {
             SaveManager.instance.activeSave.activePicture = SaveData.ActivePicture.ok_tower_man;
             activePicture = ActivePicture.ok_tower_man;
         }
 
-        else 
+        else
         {
             SaveManager.instance.activeSave.activePicture = SaveData.ActivePicture.ok_back;
             activePicture = ActivePicture.ok_back;
