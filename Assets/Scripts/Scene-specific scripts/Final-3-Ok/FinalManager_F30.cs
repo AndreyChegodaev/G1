@@ -32,7 +32,7 @@ public class FinalManager_F30 : MonoBehaviour
             positions[3].GetComponent<Renderer>().enabled = true;
         }
 
-        if (SaveManager.instance.activeSave.dejaVu > 1)
+        if (SaveManager.instance.activeSave.dejaVu != 0)
         {
             positions[4].GetComponent<Renderer>().enabled = true;
             positions[5].GetComponent<Renderer>().enabled = false;
