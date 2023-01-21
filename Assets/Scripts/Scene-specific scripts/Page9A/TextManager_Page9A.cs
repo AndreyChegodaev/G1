@@ -23,7 +23,11 @@ public class TextManager_Page9A : MonoBehaviour
         ExceptionPrimary();
         Lineup();
 
-        paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        if (SaveManager.instance.activeSave.waitAtTheDoor <=3)
+        {
+            paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+        }
+
 
         nextButton.onClick.AddListener(TaskOnClick);
     }
@@ -103,10 +107,10 @@ public class TextManager_Page9A : MonoBehaviour
 
         else
         {
-            paragraphs[0] = null;
-            paragraphs[1] = null;
-            paragraphs[2] = null;
-            paragraphs[3] = null;
+            paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = false;
+            paragraphs[1].GetComponent<TMPro.TextMeshProUGUI>().enabled = false;
+            paragraphs[2].GetComponent<TMPro.TextMeshProUGUI>().enabled = false;
+            paragraphs[3].GetComponent<TMPro.TextMeshProUGUI>().enabled = false;
             //paragraphs[4] = null;
             //paragraphs[5] = null;
             //paragraphs[6] = null;

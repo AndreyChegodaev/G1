@@ -9,9 +9,13 @@ public class IntObjController_Page9A : MonoBehaviour
     public GameObject bushes;
     public GameObject doormat;
     public GameObject man;
+    public GameObject interactiveObjects;
+
+    private Animator animator;
 
     void Start()
     {
+        animator = interactiveObjects.GetComponent<Animator>();
         man.SetActive(false);
         Conditions();
     }
@@ -30,6 +34,7 @@ public class IntObjController_Page9A : MonoBehaviour
             man.SetActive(true);
             bushes.SetActive(false);
             doormat.SetActive(false);
+            animator.SetBool("DoorOpens", true);
         }
     }
 }

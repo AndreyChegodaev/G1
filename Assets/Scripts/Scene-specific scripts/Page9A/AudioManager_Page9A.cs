@@ -28,7 +28,6 @@ public class AudioManager_Page9A : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         StartAudio();
         previousTrack.interactable = false;
-
     }
 
     // Update is called once per frame
@@ -56,30 +55,34 @@ public class AudioManager_Page9A : MonoBehaviour
 
     public void StartAudio(int changeMusic = 0)
     {
-        currentTrack += changeMusic;
-        if (currentTrack >= audioClips.Count)
+        if (audioClips.Count != 0)
         {
-            currentTrack = 0;
-        }
-        
-        else if (currentTrack < 0)
-        {
-            currentTrack = audioClips.Count - 1;
-        }
-       
-        if (audioSource.isPlaying && changeMusic == 0)
-        {
-            return;
-        }
-        
-        if (stop)
-        {
-            stop = false;
-        }
+            currentTrack += changeMusic;
+            if (currentTrack >= audioClips.Count)
+            {
+                currentTrack = 0;
+            }
+
+            else if (currentTrack < 0)
+            {
+                currentTrack = audioClips.Count - 1;
+            }
+
+            if (audioSource.isPlaying && changeMusic == 0)
+            {
+                return;
+            }
+
+            if (stop)
+            {
+                stop = false;
+            }
 
 
-        audioSource.clip = audioClips[currentTrack];
-        audioSource.Play();
+            audioSource.clip = audioClips[currentTrack];
+            audioSource.Play();
+        }
+
     }
     public void StopAudio()
     {

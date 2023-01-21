@@ -21,7 +21,7 @@ public class TextManager_Page8: MonoBehaviour
     private void Start()
     {
         ExceptionPrimary();
-        Lineup();
+      
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
 
        /* if (SaveManager.instance.activeSave.heardVoice == true)
@@ -80,6 +80,7 @@ public class TextManager_Page8: MonoBehaviour
         else
         {
             ExceptionsSecondary2();
+            Lineup();
         }
     }
 

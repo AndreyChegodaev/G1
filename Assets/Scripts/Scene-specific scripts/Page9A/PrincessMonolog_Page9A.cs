@@ -39,7 +39,11 @@ public class PrincessMonolog_Page9A : MonoBehaviour
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 4)
         {
             flag = true;
-            exclamationMark.SetActive(true);
+            if (exclamationSpawned == false) // 4.
+            {
+                Instantiate(exclamationMark, GameObject.FindGameObjectWithTag("Princess").transform);
+                exclamationSpawned = true;
+            }
         }
     }
 
@@ -61,24 +65,20 @@ public class PrincessMonolog_Page9A : MonoBehaviour
         if (SaveManager.instance.activeSave.waitAtTheDoor <= 1)
         {
             audioSource.clip = princessLines[0];
-            Debug.Log("Princess line 0");
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 2)
         {
             audioSource.clip = princessLines[1];
-            Debug.Log("Princess line 1");
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 3)
         {
             audioSource.clip = princessLines[2];
-            Debug.Log("Princess line 2");
         } 
         else
         {
             audioSource.clip = princessLines[3];
-            Debug.Log("Princess line 3");
         }
 
     }

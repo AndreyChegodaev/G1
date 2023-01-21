@@ -13,7 +13,6 @@ public class CCController_Page9A : MonoBehaviour
             Destroy(lines[1]);
             Destroy(lines[2]);
             Destroy(lines[3]);
-            Debug.Log("Princess line 0");
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 2)
@@ -21,7 +20,6 @@ public class CCController_Page9A : MonoBehaviour
             Destroy(lines[0]);
             Destroy(lines[2]);
             Destroy(lines[3]);
-            Debug.Log("Princess line 1");
         }
 
         else if (SaveManager.instance.activeSave.waitAtTheDoor == 3)
@@ -29,14 +27,12 @@ public class CCController_Page9A : MonoBehaviour
             Destroy(lines[0]);
             Destroy(lines[1]);
             Destroy(lines[3]);
-            Debug.Log("Princess line 2");
         }
         else
         {
             Destroy(lines[0]);
             Destroy(lines[1]);
             Destroy(lines[2]);
-            Debug.Log("Princess line 3");
         }
     }
 
