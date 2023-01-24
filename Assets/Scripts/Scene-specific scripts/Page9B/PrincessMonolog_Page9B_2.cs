@@ -5,11 +5,10 @@ using UnityEngine;
 public class PrincessMonolog_Page9B_2 : MonoBehaviour
 {
     public GameObject exclamationMark;
-    public AudioClip princessLine;
-    //public Sprite princessTalking;
+    public AudioClip[] princessLines;
     AudioSource audioSource;
     private bool flag = false;
-    private bool exclamationSpawned = false; // 2. 
+    private bool exclamationSpawned = false;
 
     // Start is called before the first frame update
 
@@ -17,12 +16,12 @@ public class PrincessMonolog_Page9B_2 : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = princessLine;
+
     }
 
     private void Update()
     {
-        transform.position = GameObject.FindGameObjectWithTag("Princess").transform.position + Vector3.up * 2; // 3.
+        transform.position = GameObject.FindGameObjectWithTag("Princess").transform.position + Vector3.up * 2;
 
         if (SaveManager.instance.activeSave.settings_VoiceSwitch == false)
         {
@@ -30,9 +29,16 @@ public class PrincessMonolog_Page9B_2 : MonoBehaviour
         }
         else audioSource.mute = false;
 
-        if (AudioManager_Page9B.instance.currentTrack == 1)
+        if (AudioManager_Page9B.instance.currentTrack == AudioManager_Page9B.instance.audioClips.Count - 2)
         {
             StartCoroutine(WaitForTrackToEnd());
+
+        }
+        else if (AudioManager_Page9B.instance.currentTrack == AudioManager_Page9B.instance.audioClips.Count - 1)
+        {
+            StopCoroutine(WaitToHideCC1());
+            audioSource.clip = princessLines[1];
+            flag = true;
         }
     }
 
@@ -42,7 +48,7 @@ public class PrincessMonolog_Page9B_2 : MonoBehaviour
         flag = true;
         exclamationMark.SetActive(true);
 
-        if (exclamationSpawned == false) // 4.
+        if (exclamationSpawned == false)
         {
             Instantiate(exclamationMark, GameObject.FindGameObjectWithTag("Princess").transform);
             exclamationSpawned = true;
@@ -50,22 +56,42 @@ public class PrincessMonolog_Page9B_2 : MonoBehaviour
     }
 
 
-
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && flag == true)
         {
+
+            if (AudioManager_Page9B.instance.currentTrack == AudioManager_Page9B.instance.audioClips.Count - 2)
+            {
+                audioSource.clip = princessLines[0];
+                StartCoroutine(WaitToHideCC1());
+            }
+
+            else
+            {
+                audioSource.clip = princessLines[1];
+                StartCoroutine(WaitToHideCC2());
+            }
+
             audioSource.Play();
             CCManager_Page9B.instance.Show();
-            StartCoroutine(WaitToHideCC());
+
         }
     }
 
-    IEnumerator WaitToHideCC()
+    IEnumerator WaitToHideCC1()
     {
-        yield return new WaitForSeconds(princessLine.length);
+        yield return new WaitForSeconds(audioSource.clip.length);
         CCManager_Page9B.instance.Hide();
-        GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false; // 5.
+    }
 
+    IEnumerator WaitToHideCC2()
+    {
+        yield return new WaitForSeconds(audioSource.clip.length);
+        CCManager_Page9B.instance.Hide();
+        if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+        {
+            GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

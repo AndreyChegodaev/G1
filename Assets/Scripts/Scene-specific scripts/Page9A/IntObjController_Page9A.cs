@@ -35,6 +35,15 @@ public class IntObjController_Page9A : MonoBehaviour
             bushes.SetActive(false);
             doormat.SetActive(false);
             animator.SetBool("DoorOpens", true);
+            StartCoroutine(WaitForIdle());
         }
+    }
+
+    IEnumerator WaitForIdle()
+    {
+        yield return new WaitForSeconds(4.5f);
+        animator.SetBool("DoorOpens", false);
+
+
     }
 }

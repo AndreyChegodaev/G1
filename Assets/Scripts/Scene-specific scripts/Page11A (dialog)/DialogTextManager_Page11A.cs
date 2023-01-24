@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class DialogTextManager_Page11A : MonoBehaviour
 {
+    public static DialogTextManager_Page11A instance;
+
     public List<GameObject> paragraphs = new List<GameObject>();
 
     [SerializeField]
@@ -34,8 +36,13 @@ public class DialogTextManager_Page11A : MonoBehaviour
     WhoStartsDialog whoStartsDialog;
 
 
-    private int currentSpawnIndex = 0;
+    public int currentSpawnIndex = 0;
 
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
