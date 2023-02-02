@@ -59,7 +59,7 @@ public class CreditsManager : MonoBehaviour, IPointerDownHandler
         textContainer.transform.position = Vector2.MoveTowards(textContainer.transform.position, creditsFinalPosition.position, textRollSpeed * Time.deltaTime);
         if (textContainer.transform.position == creditsFinalPosition.transform.position)
         {
-            CloseCredits();
+            Invoke("CloseCredits", 5);
         }
 
     }

@@ -106,9 +106,9 @@ public class AudioManager_F5T : MonoBehaviour
     { 
         if (SaveManager.instance.activeSave.heardVoice == true)
         {
-            audioClips[1] = null;
+            audioClips[2] = null;
         }
-        else audioClips[2] = null;
+        else audioClips[1] = null;
 
         audioClips.RemoveAll(item => item == null);
     }

@@ -29,6 +29,7 @@ public class FinalCameraMover : MonoBehaviour
         forward.onClick.AddListener(TaskOnClick);
 
         witchVision = GameObject.Find("WitchVision");
+        if (witchVision != null)
         witchVision.SetActive(false);
     }
 
@@ -60,6 +61,7 @@ public class FinalCameraMover : MonoBehaviour
 
         if (i == 5)
         {
+            if (witchVision != null)
             witchVision.SetActive(true);
         }
     }

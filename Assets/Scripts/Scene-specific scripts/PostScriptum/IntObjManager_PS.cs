@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IntObjManager_PS : MonoBehaviour 
 {
-    public GameObject princess;
+    public GameObject princessMonolog;
     
     public AudioSource audioSource;
     public AudioClip audioOnHover;
@@ -62,7 +62,7 @@ public class IntObjManager_PS : MonoBehaviour
             {
 
                 AudioManager_PS.instance.audioSource.Stop();
-                princess.GetComponent<PrincessMonolog_PS>().TaskOnClick();
+                princessMonolog.GetComponent<PrincessMonolog_PS>().OnMouseOver();
                 gameObject.GetComponent<BookCloser>().TaskOnClick();
                
                 

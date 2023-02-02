@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class CameraManager_Page8 : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class CameraManager_Page8 : MonoBehaviour
 
     public int currentCamPosition;
 
+    public Volume lensNight;
+
     private float t = 0;
 
     private void Awake()
@@ -26,6 +30,13 @@ public class CameraManager_Page8 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SaveManager.instance.activeSave.waitAtTheDoor == 2)
+            lensNight.weight = 0.2f;
+        else if (SaveManager.instance.activeSave.waitAtTheDoor == 3)
+            lensNight.weight = 0.4f;
+        else if (SaveManager.instance.activeSave.waitAtTheDoor > 3)
+            lensNight.weight = 0.6f;
+
         if (SaveManager.instance.activeSave.heardVoice == true)
         {
             currentCamPosition = 0;

@@ -29,10 +29,15 @@ public class UniversalMover_PF5T : MonoBehaviour
 	{
 		transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 
-		if (transform.position == waypoints[waypointIndex].transform.position)
-		{
-			waypointIndex += 1;
+		
+		if (waypointIndex < waypoints.Length - 1)
+        {
+			if (transform.position == waypoints[waypointIndex].transform.position)
+			{
+				waypointIndex++;
+			}
 		}
+
 
 		if (backtrack == true) 
 		{ 

@@ -36,6 +36,17 @@ public class PrincessMonolog_Page9C : MonoBehaviour
         {
             StartCoroutine(WaitForTrackToEnd());
         }
+        else if (AudioManager_Page9C.instance.currentTrack > 1)
+        {
+            StopCoroutine(WaitForTrackToEnd());
+            flag = false;
+            exclamationSpawned = true;
+            if (GameObject.FindGameObjectWithTag("Exclamation") != null)
+            {
+                GameObject.FindGameObjectWithTag("Exclamation").GetComponent<SpriteRenderer>().enabled = false;
+            }
+        }
+
     }
 
     IEnumerator WaitForTrackToEnd()

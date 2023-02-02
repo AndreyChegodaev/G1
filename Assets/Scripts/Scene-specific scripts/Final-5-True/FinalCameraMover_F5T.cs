@@ -40,12 +40,12 @@ public class FinalCameraMover_F5T : MonoBehaviour
 
             transform.eulerAngles = currentAngle;
 
-            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, cameraPositions[i].position + Vector3.forward * -2, followSpeed * Time.deltaTime);
+            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, cameraPositions[i].position + Vector3.forward * -2, followSpeed * Time.deltaTime / 10f);
 
             if (i == cameraPositions.Count - 1)
             {
                //had to hardcode the zoom float: for some reason it doesn't work the smart way
-                mainCamera.orthographicSize = Mathf.MoveTowards(mainCamera.orthographicSize, 13, Time.deltaTime);
+                mainCamera.orthographicSize = Mathf.MoveTowards(mainCamera.orthographicSize, 6.5f, Time.deltaTime /4.9f);
             }
 
         }

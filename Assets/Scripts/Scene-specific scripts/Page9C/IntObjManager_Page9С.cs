@@ -16,6 +16,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
     private bool flag = false;
 
     private GameObject choice1;
+    Animator manAnim;
 
 
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
         renderer.color = initialColor;
 
         choice1 = GameObject.Find("Man");
+        manAnim = choice1.GetComponent<Animator>();
 
     }
 
@@ -61,6 +63,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
                     choice1.GetComponent<PolygonCollider2D>().enabled = false;
                     gameObject.GetComponentInChildren<DialogCanvasManager>().StartDialog();
                     AudioManager_Page9C.instance.StopAudio();
+                    manAnim.SetBool("OhSnap", true);
                 }
             }
         }
