@@ -9,9 +9,12 @@ public class TextManager_PF3O: MonoBehaviour
     private int spawnIndex = 0;
     [SerializeField]
     public Button nextButton;
+    public GameObject theEnd;
 
     private void Start()
     {
+
+        theEnd.SetActive(false);
         nextButton.onClick.AddListener(TaskOnClick);
 
         Exceptions();
@@ -21,6 +24,7 @@ public class TextManager_PF3O: MonoBehaviour
         if (paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            theEnd.SetActive(true);
         }
 
     }

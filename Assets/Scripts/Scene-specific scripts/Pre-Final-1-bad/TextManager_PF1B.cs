@@ -10,6 +10,7 @@ public class TextManager_PF1B : MonoBehaviour
     private int lineupIndex = 1;
     [SerializeField]
     public Button nextButton;
+    public GameObject theEnd;
 
     public static TextManager_PF1B instance;
 
@@ -20,6 +21,7 @@ public class TextManager_PF1B : MonoBehaviour
 
     private void Start()
     {
+        theEnd.SetActive(false);
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
         nextButton.onClick.AddListener(TaskOnClick);
 
@@ -38,6 +40,7 @@ public class TextManager_PF1B : MonoBehaviour
             if (paragraphs[paragraphs.Count - 2].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
             {
                 paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+                theEnd.SetActive(true);
             }
         }
 
