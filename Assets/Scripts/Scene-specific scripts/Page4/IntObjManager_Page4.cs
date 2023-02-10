@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IntObjManager_Page4 : MonoBehaviour //don't rename to 3C - for some reason it makes the IDE grumpy
 {
+    public GameObject blinkPrefab;
     public AudioSource audioSource;
     public AudioClip audioOnHover;
     
@@ -14,6 +15,7 @@ public class IntObjManager_Page4 : MonoBehaviour //don't rename to 3C - for some
     public Color hoverColor = Color.green;
     private new SpriteRenderer renderer;
     private bool flag = false;
+    private bool blinked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,11 @@ public class IntObjManager_Page4 : MonoBehaviour //don't rename to 3C - for some
         if (TextManager_Page4.instance.paragraphs[TextManager_Page4.instance.paragraphs.Count-1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;
+            if (gameObject.activeSelf == true && blinked == false)
+            {
+                Instantiate(blinkPrefab, gameObject.transform);
+                blinked = !blinked;
+            }
         }
     }
 

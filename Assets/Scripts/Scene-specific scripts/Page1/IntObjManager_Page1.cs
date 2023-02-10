@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class IntObjManager_Page1 : MonoBehaviour
 {
+
+    public GameObject blinkPrefab;
+    
     public AudioSource audioSource;
     public AudioClip audioOnHover;
     
@@ -14,6 +17,7 @@ public class IntObjManager_Page1 : MonoBehaviour
     public Color hoverColor = Color.green;
     private new SpriteRenderer renderer;
     private bool flag = false;
+    private bool blinked = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,12 @@ public class IntObjManager_Page1 : MonoBehaviour
         if (TextManager_Page1.instance.paragraphs[TextManager_Page1.instance.paragraphs.Count-1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;
+            flag = true;
+            if (gameObject.activeSelf == true && blinked == false)
+            {
+                Instantiate(blinkPrefab, gameObject.transform);
+                blinked = !blinked;
+            }
         }
     }
 

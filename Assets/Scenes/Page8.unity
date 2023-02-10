@@ -558,6 +558,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334544017}
   m_CullTransparentMesh: 1
+--- !u!1 &344167851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344167852}
+  m_Layer: 0
+  m_Name: blinkPositionDoormat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344167852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344167851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.74, y: 5.11, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &381278271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,6 +833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e097049b1a0955d49b961bc3fa9a65ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 888443188}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The fence
@@ -825,6 +857,36 @@ MonoBehaviour:
   turningPage: {fileID: 49118980}
   sceneName: Page9B
   illustrationCamera: {fileID: 3500094960660836461}
+--- !u!1 &391643353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391643354}
+  m_Layer: 0
+  m_Name: blinkPositionDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &391643354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391643353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.4, y: 8.51, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479450924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e097049b1a0955d49b961bc3fa9a65ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 391643354}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The door
@@ -2104,6 +2168,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 21}
   m_EdgeRadius: 0
+--- !u!1 &888443187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888443188}
+  m_Layer: 0
+  m_Name: blinkPositionBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888443188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888443187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74.69, y: 2.92, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &911396455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7877101405538146076, guid: 2c6e2a4bc990af745aefa7911d91b7b4, type: 3}
@@ -3238,11 +3332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.21008067
+      value: 0.24750714
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.y
-      value: 2.6475644
+      value: 2.3449366
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3254,11 +3348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1011.09674
+      value: -963.1909
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1187.0966
+      value: 968.661
       objectReference: {fileID: 0}
     - target: {fileID: 3917211001291765147, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Name
@@ -3751,6 +3845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e097049b1a0955d49b961bc3fa9a65ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 344167852}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The doormat
@@ -3773,6 +3869,36 @@ MonoBehaviour:
   turningPage: {fileID: 49118980}
   sceneName: Page9C
   illustrationCamera: {fileID: 3500094960660836461}
+--- !u!1 &1308758924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308758925}
+  m_Layer: 0
+  m_Name: blinkPositionPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1308758925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308758924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.79, y: 1.93, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1438090627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13544,6 +13670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e097049b1a0955d49b961bc3fa9a65ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 1308758925}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The path

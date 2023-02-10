@@ -609,6 +609,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &117086134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117086135}
+  m_Layer: 0
+  m_Name: blinkPositionPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117086135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117086134}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.35, y: 1.93, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &224597183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6026930457375473278, guid: aabb6b0ca338d014da18c742cc0194d5, type: 3}
@@ -966,6 +996,36 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3500094960834136083, guid: 710c1add2123da34881854d45047b1c3, type: 3}
   m_PrefabInstance: {fileID: 3500094960660836460}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &536934608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536934609}
+  m_Layer: 0
+  m_Name: blinkPositionDoormat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536934609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536934608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.299995, y: 5.11, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &560014801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1267,6 +1327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2378fc5c8bc818d4c830d794d167cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 117086135}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The path
@@ -1289,6 +1351,36 @@ MonoBehaviour:
   turningPage: {fileID: 49118980}
   sceneName: PreFinal3Ok
   illustrationCamera: {fileID: 3500094960660836463}
+--- !u!1 &576121610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 576121611}
+  m_Layer: 0
+  m_Name: blinkPositionBushes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &576121611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576121610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.25, y: 2.92, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576903599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2642,36 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1179730301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179730302}
+  m_Layer: 0
+  m_Name: blinkPositionMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179730302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179730301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.2, y: 5.11, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1216703044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3600,6 +3722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2378fc5c8bc818d4c830d794d167cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 576121611}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The fence
@@ -4172,6 +4296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2378fc5c8bc818d4c830d794d167cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 536934609}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The doormat
@@ -4537,6 +4663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2378fc5c8bc818d4c830d794d167cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 1179730302}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The man
@@ -4812,6 +4940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2378fc5c8bc818d4c830d794d167cab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
+  blinkPosition: {fileID: 2103960181}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The door
@@ -5903,11 +6033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.x
-      value: 1.1799828
+      value: 0.25462964
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.y
-      value: 2.882263
+      value: 2.3544304
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_SizeDelta.x
@@ -5919,11 +6049,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.37799
+      value: -954.0741
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1353.1271
+      value: 975.49866
       objectReference: {fileID: 0}
     - target: {fileID: 3917211001291765147, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Name
@@ -6047,6 +6177,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
+--- !u!1 &2103960180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103960181}
+  m_Layer: 0
+  m_Name: blinkPositionDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2103960181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103960180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.96, y: 8.51, z: -3.7177415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &582357557936497467
 PrefabInstance:
   m_ObjectHideFlags: 0

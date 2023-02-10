@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class TextManager_Page9C: MonoBehaviour 
 {
     public List<GameObject> paragraphs = new List<GameObject>();
-    private int spawnIndex = 0;
+    private int spawnIndex = 1;
     private int lineupIndex = 1;
-    [SerializeField]
-    public Button nextButton;
 
     public static TextManager_Page9C instance;
 
@@ -21,10 +19,8 @@ public class TextManager_Page9C: MonoBehaviour
     private void Start()
     {
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-        nextButton.onClick.AddListener(TaskOnClick);
 
         Lineup();
-
     }
     public void TaskOnClick()
     {
@@ -34,6 +30,7 @@ public class TextManager_Page9C: MonoBehaviour
 
         paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
         }
+        Debug.Log(spawnIndex);
 
     }
 

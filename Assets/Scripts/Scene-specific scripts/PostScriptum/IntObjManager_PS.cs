@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IntObjManager_PS : MonoBehaviour 
 {
+    public GameObject blinkPrefab;
+    
     public GameObject princessMonolog;
     
     public AudioSource audioSource;
@@ -16,6 +18,7 @@ public class IntObjManager_PS : MonoBehaviour
     public Color hoverColor = Color.green;
     private new SpriteRenderer renderer;
     private bool flag = false;
+    private bool blinked = false;
 
     private GameObject choice1;
     //private GameObject choice2;
@@ -47,6 +50,11 @@ public class IntObjManager_PS : MonoBehaviour
         if (TextManager_PS.instance.paragraphs[TextManager_PS.instance.paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             flag = true;
+            if (gameObject.activeSelf == true && blinked == false)
+            {
+                Instantiate(blinkPrefab, gameObject.transform);
+                blinked = !blinked;
+            }
         }
     }
 

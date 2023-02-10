@@ -1218,11 +1218,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268ffe72774a189408bef008234c1d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blinkPrefab: {fileID: 4699613319638860837, guid: 6e838f88bdc6f1b4898441ce11ac899c, type: 3}
   audioSource: {fileID: 0}
   audioOnHover: {fileID: 8300000, guid: 651db0990b8034845bcdf70d228c07fc, type: 3}
   header: The path
   content: Proceed to emerald tower
   hoverColor: {r: 0, g: 1, b: 0, a: 1}
+  blinked: 0
 --- !u!114 &691643964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,11 +2851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.x
-      value: -0.261598
+      value: 0.8582621
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.41207945
+      value: 0.8924051
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2865,11 +2867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1614.8455
+      value: -181.42447
       objectReference: {fileID: 0}
     - target: {fileID: 3917211000733165172, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -423.36774
+      value: -77.49289
       objectReference: {fileID: 0}
     - target: {fileID: 3917211001291765147, guid: 7badbea1a7886674a8baedca8c749265, type: 3}
       propertyPath: m_Name
