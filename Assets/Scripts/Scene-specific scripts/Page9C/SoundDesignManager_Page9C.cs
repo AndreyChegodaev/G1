@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class SoundDesignManager : MonoBehaviour
+public class SoundDesignManager_Page9C : MonoBehaviour
 {
     public AudioClip audioClip;
     public float delay = 0;
@@ -16,14 +15,14 @@ public class SoundDesignManager : MonoBehaviour
     }
     public PlaySoundOn playSoundOn;
     public AudioSource audioSource;
-    private CameraManager camManager;
+    private CameraManager_Page9B camManager;
     public int cameraPosition;
     private bool clipPlayed = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        camManager = GameObject.Find("CameraManager").GetComponent<CameraManager>();
+        camManager = GameObject.Find("CameraManager").GetComponent<CameraManager_Page9B>();
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.clip = audioClip;
 
@@ -81,7 +80,7 @@ public class SoundDesignManager : MonoBehaviour
         {
             if (clipPlayed == false)
             {
-                audioSource.PlayOneShot(audioClip);
+                audioSource.Play();
                 Debug.Log("Sound " + gameObject.name + " played");
                 clipPlayed = !clipPlayed;
             }

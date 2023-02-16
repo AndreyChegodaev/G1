@@ -13,12 +13,17 @@ public class ScriptScene_Page9B : MonoBehaviour
     private float princessSpeed;
     private Animator anim;
 
+    private Collider2D princessColider;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed;
         currentPrincessPosition = 0;
         transform.position = princessStartPosition.position;
+
+        princessColider = gameObject.GetComponent<Collider2D>();
+        princessColider.enabled = false;
     }
     private void Update()
     {
@@ -36,6 +41,7 @@ public class ScriptScene_Page9B : MonoBehaviour
         else if (currentPrincessPosition == 1)
         {
             anim.SetTrigger("JumpClapBlow");
+            princessColider.enabled = true;
         }
 
 

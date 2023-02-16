@@ -21,6 +21,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
 
     private GameObject choice1;
     Animator manAnim;
+    private SoundDesignManager_Page9C soundDesign;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
 
         choice1 = GameObject.Find("Man");
         manAnim = choice1.GetComponent<Animator>();
+
+        soundDesign = GameObject.Find("SnapSound").GetComponent<SoundDesignManager_Page9C>();
 
     }
 
@@ -73,6 +76,7 @@ public class IntObjManager_Page9Ñ : MonoBehaviour
                     gameObject.GetComponentInChildren<DialogCanvasManager>().StartDialog();
                     AudioManager_Page9C.instance.StopAudio();
                     manAnim.SetBool("OhSnap", true);
+                    soundDesign.audioSource.mute = true;
                 }
             }
         }

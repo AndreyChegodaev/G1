@@ -14,7 +14,7 @@ public class ScriptScene_Page8 : MonoBehaviour
     private int currentPrincessPosition;
     private float princessSpeed;
     private Animator anim;
-
+    private Collider2D princessColider;
     void Start()
     {
         if (SaveManager.instance.activeSave.heardVoice == true)
@@ -31,6 +31,7 @@ public class ScriptScene_Page8 : MonoBehaviour
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed;
         
         transform.position = princessStartPosition.position;
+        princessColider = gameObject.GetComponent<Collider2D>();
     }
     private void Update()
     {
@@ -56,6 +57,7 @@ public class ScriptScene_Page8 : MonoBehaviour
         if (currentPrincessPosition == 2)
         {
             anim.SetBool("Knock", true);
+            princessColider.enabled = true;
         }
 
         if (currentPrincessPosition == 3)

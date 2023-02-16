@@ -14,13 +14,17 @@ public class ScriptScene_Page3A : MonoBehaviour
     private int currentPrincessPosition;
     private float princessSpeed;
     private Animator anim;
+    private GameObject ring;
+    private Collider2D ringCollider;
 
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed * 5;
-        
+        ring = GameObject.Find("FingerSound");
+        ringCollider = ring.GetComponent<Collider2D>();
+
         if (SaveManager.instance.activeSave.onTree == true)
         {
             currentPrincessPosition = 0;
@@ -32,8 +36,7 @@ public class ScriptScene_Page3A : MonoBehaviour
             currentPrincessPosition = 1;
             princessStartPosition = princessPositions[1];
             skeleton.GetComponent<Animator>().SetBool("SkeletonHidden", true);
-        } 
-
+        }
 
         transform.position = princessStartPosition.position;
     }
@@ -51,6 +54,10 @@ public class ScriptScene_Page3A : MonoBehaviour
             anim.SetBool("Jump", false);
             anim.SetBool("TakeRing", true);
             skeleton.GetComponent<Animator>().SetBool("Skeleton_Ringless", true);
+            if (ringCollider != null)
+                ringCollider.enabled = true;
+            Invoke("RemoveObject", 0.3f);
+
 
         }
         else if (currentPrincessPosition == 2)
@@ -97,6 +104,11 @@ public class ScriptScene_Page3A : MonoBehaviour
     {
         yield return new WaitForSeconds(0.8f);
         illustrationCamera.GetComponent<StressReceiver>().InduceStress(1f);
+    }
+
+    void RemoveObject()
+    {
+        Destroy(ring);
     }
 
 }

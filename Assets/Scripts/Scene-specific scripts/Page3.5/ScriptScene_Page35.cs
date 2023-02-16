@@ -14,6 +14,8 @@ public class ScriptScene_Page35 : MonoBehaviour
     private bool collisionWithFork;
     //private bool princessIsCreated = false;
     private Animator anim;
+    private SoundDesignManager sound;
+
 
     void Start()
     {
@@ -22,6 +24,8 @@ public class ScriptScene_Page35 : MonoBehaviour
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed / 3;
         currentPrincessPosition = 0;
         transform.position = princessStartPosition.position;
+        sound = GameObject.Find("ForkSound").GetComponent<SoundDesignManager>();
+
     }
 
     // Update is called once per frame
@@ -29,7 +33,7 @@ public class ScriptScene_Page35 : MonoBehaviour
     {
         if (currentPrincessPosition == 0)
         {
-            anim.SetBool("CrawlTree", true);           
+            anim.SetBool("CrawlTree", true);
             anim.SetFloat("Horizontal", 1);
             anim.SetFloat("Vertical", -0.5f);
         }
@@ -37,6 +41,7 @@ public class ScriptScene_Page35 : MonoBehaviour
         if (currentPrincessPosition == 1)
         {
             anim.SetBool("Shrug", true);
+            sound.audioSource.Stop();
         }
 
 
@@ -70,6 +75,8 @@ public class ScriptScene_Page35 : MonoBehaviour
             //Debug.Log("current position " + currentPrincessPosition);
         }
     }
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

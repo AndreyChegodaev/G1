@@ -8,10 +8,11 @@ public class ScriptScene_Page9C : MonoBehaviour
     public Camera illustrationCamera;
     int currentAnimation;
     Animator anim;
-    
-
+  
     private GameObject man;
     Animator manAnim;
+
+    private SoundDesignManager_Page9C soundDesign;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class ScriptScene_Page9C : MonoBehaviour
         manAnim = man.GetComponent<Animator>();
         currentAnimation = 0;
         anim.Play(animationNames[currentAnimation]);
+        soundDesign = GameObject.Find("SnapSound").GetComponent<SoundDesignManager_Page9C>();
+
     }
 
 
@@ -47,5 +50,6 @@ public class ScriptScene_Page9C : MonoBehaviour
     void OhSnap()
     {
         manAnim.SetBool("OhSnap", true);
+        soundDesign.audioSource.Stop();
     }
 }
