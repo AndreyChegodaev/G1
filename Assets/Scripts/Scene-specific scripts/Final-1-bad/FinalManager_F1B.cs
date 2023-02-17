@@ -11,13 +11,13 @@ public class FinalManager_F1B : MonoBehaviour
     {
         if (SaveManager.instance.activeSave.hasFinger == true)
         {
-            positions[0].GetComponent<Renderer>().enabled = true;
-            positions[1].GetComponent<Renderer>().enabled = false;
+            positions[0].GetComponent<Renderer>().enabled = false;
+            positions[1].GetComponent<Renderer>().enabled = true;
         }
         else
         {
-            positions[0].GetComponent<Renderer>().enabled = false;
-            positions[1].GetComponent<Renderer>().enabled = true;
+            positions[0].GetComponent<Renderer>().enabled = true;
+            positions[1].GetComponent<Renderer>().enabled = false;
         }
 
         if (SaveManager.instance.activeSave.hasFork == true)

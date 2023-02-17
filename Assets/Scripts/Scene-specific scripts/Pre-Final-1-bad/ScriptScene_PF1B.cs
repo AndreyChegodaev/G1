@@ -46,6 +46,7 @@ public class ScriptScene_PF1B : MonoBehaviour
         if (currentPrincessPosition == 3)
         {
             anim.SetBool("SitFinal", true);
+            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_NoOneHome").Trigger();
         }
 
 

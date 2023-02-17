@@ -62,7 +62,11 @@ public class FinalCameraMover : MonoBehaviour
         if (i == 5)
         {
             if (witchVision != null)
-            witchVision.SetActive(true);
+            {
+                witchVision.SetActive(true);
+                var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_BrokenLoop").Trigger();
+            }
+
         }
     }
 

@@ -20,6 +20,6 @@ public class FinalManager_F4G : MonoBehaviour
             positions[3].GetComponent<Renderer>().enabled = true;
         }
 
-
+        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AlmostGood").Trigger();
     }
 }

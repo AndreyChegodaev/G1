@@ -24,6 +24,10 @@ public class CreditsManager : MonoBehaviour, IPointerDownHandler
 
         background.enabled = false;
         textContainer.SetActive(false);
+        if (finalScene == true)
+        {
+            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_HappilyEverAfter").Trigger();
+        }
 
     }
 

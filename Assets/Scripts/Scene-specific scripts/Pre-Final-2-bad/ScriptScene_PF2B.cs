@@ -20,7 +20,6 @@ public class ScriptScene_PF2B : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         witch = GameObject.FindGameObjectWithTag("Witch");
         anim = gameObject.GetComponent<Animator>();
         princessSpeed = realPrincess.GetComponent<MoveToClick>().speed;
@@ -68,7 +67,7 @@ public class ScriptScene_PF2B : MonoBehaviour
         {
             anim.SetFloat("Speed", 0);
             princessSpeed = 0;
-
+            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_WarmWelcome").Trigger();
         }
 
 

@@ -35,6 +35,7 @@ public class IntObjController_Page9A : MonoBehaviour
             bushes.SetActive(false);
             doormat.SetActive(false);
             animator.SetBool("DoorOpens", true);
+            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_TheArtOfWaiting").Trigger();
             StartCoroutine(WaitForIdle());
         }
     }
@@ -43,7 +44,6 @@ public class IntObjController_Page9A : MonoBehaviour
     {
         yield return new WaitForSeconds(4.5f);
         animator.SetBool("DoorOpens", false);
-
 
     }
 }

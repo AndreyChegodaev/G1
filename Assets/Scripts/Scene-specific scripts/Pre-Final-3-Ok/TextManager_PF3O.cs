@@ -25,6 +25,7 @@ public class TextManager_PF3O: MonoBehaviour
         {
             paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
             theEnd.SetActive(true);
+            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AdventureShmadventure").Trigger();
         }
 
     }

@@ -16,6 +16,7 @@ public class TextManager_WD: MonoBehaviour
         paragraphs[0].SetActive(true);
         pictures[0].SetActive(true);
         nextButton.onClick.AddListener(TaskOnClick);
+        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_IJWSS").Trigger();
     }
     public void TaskOnClick()
     {

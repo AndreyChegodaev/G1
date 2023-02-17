@@ -62,8 +62,9 @@ public class Intro_Jar : MonoBehaviour
 
         if (ingridientsInJar >= 5)
         {
-
+            UnlockAchievement();
             StartCoroutine(Wait());
+
         }
     }
 
@@ -74,5 +75,10 @@ public class Intro_Jar : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("JarIsReady", true);
         gameObject.GetComponent<AudioSource>().clip = moveSound;
         gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    void UnlockAchievement()
+    {
+        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_Qualified").Trigger();
     }
 }
