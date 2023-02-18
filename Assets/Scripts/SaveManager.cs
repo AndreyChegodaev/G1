@@ -124,7 +124,7 @@ public class SaveData
     public bool settings_MusicSwitch = true;
     public bool settings_VoiceSwitch = true;
     public bool settings_WelcomePopUp = true;
-    public bool settings_FullIntro;
+    public bool settings_FullIntro = false;
 
 
     public bool f1B_Unlocked = false;
