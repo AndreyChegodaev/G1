@@ -190,6 +190,12 @@ public class GameManager : MonoBehaviour
             activePicture = ActivePicture.goodish;
     }
 
+    public void SetActivePictureNothing()
+    {
+        SaveManager.instance.activeSave.activePicture = SaveData.ActivePicture.nothing;
+        activePicture = ActivePicture.nothing;
+    }
+
     //This method is applied when a new game is started
     public void StartNewGame()
     {

@@ -9,6 +9,7 @@ public class ExitToDesktop : MonoBehaviour
     private Camera cam;
     private Transform camPosition;
     private Vector3 startCamPosition;
+    public GameObject DLCPopup;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class ExitToDesktop : MonoBehaviour
 
     private void Update()
     {
-        if (camPosition.position != startCamPosition)
+        if (camPosition.position != startCamPosition || DLCPopup.activeSelf == true)
         {
             gameObject.SetActive(false);
         }
