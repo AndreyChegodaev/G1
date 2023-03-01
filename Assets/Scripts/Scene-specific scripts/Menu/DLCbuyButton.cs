@@ -5,13 +5,15 @@ using Steamworks;
 
 public class DLCbuyButton : MonoBehaviour
 {
-    public int DLCiD;
-    public bool testInstalled;
+    public AppId DLCiD;
+    public int ID;
+    //public bool testInstalled;
 
     void Start()
     {
+        DLCiD = ID;
 
-        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true || testInstalled == true)
+        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true /*|| testInstalled == true*/ )
         {
             gameObject.SetActive(false);
         }
@@ -19,7 +21,6 @@ public class DLCbuyButton : MonoBehaviour
 
     public void TaskOnClick()
     {
-        //Steamworks.SteamFriends.OpenStoreOverlay(DLCiD);
-        Steamworks.SteamFriends.OpenStoreOverlay(2329372);
+        Steamworks.SteamFriends.OpenStoreOverlay(DLCiD);
     }
 }

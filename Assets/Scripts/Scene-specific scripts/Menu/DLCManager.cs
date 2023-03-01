@@ -9,13 +9,15 @@ public class DLCManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 {
     public GameObject certificate;
     public Sprite pictureBought;
-    public int DLCiD;
-
-    public bool testInstalled;
+    public AppId DLCiD;
+    public int ID;
+    //public bool testInstalled;
 
     private void Start()
     {
-        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true || testInstalled == true)
+        DLCiD = ID;
+
+        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true /*|| testInstalled == true*/)
         {
             gameObject.GetComponent<Image>().sprite = pictureBought;
         }
@@ -23,7 +25,7 @@ public class DLCManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true || testInstalled == true)
+        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true /*|| testInstalled == true*/)
         {
             certificate.SetActive(true);
         }
@@ -32,7 +34,7 @@ public class DLCManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true || testInstalled == true)
+        if (Steamworks.SteamApps.IsDlcInstalled(DLCiD) == true /*|| testInstalled == true*/)
         {
             certificate.SetActive(false);
         }

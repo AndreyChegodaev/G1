@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopUpManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] popups;
+    //[SerializeField] GameObject[] popups;
     [SerializeField] GameObject[] credits;
 
     void Start()
@@ -14,13 +14,13 @@ public class PopUpManager : MonoBehaviour
             credit.SetActive(true);
         }
 
-        if (SaveManager.instance.activeSave.settings_WelcomePopUp == true)
+        /*if (SaveManager.instance.activeSave.settings_WelcomePopUp == true)
         {
             foreach (GameObject popup in popups)
             {
                 popup.SetActive(true);
             }
-        }
+        }*/
 
 
 

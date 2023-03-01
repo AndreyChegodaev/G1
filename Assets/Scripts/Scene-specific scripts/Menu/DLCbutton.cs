@@ -20,6 +20,14 @@ public class DLCbutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         DLCPopup.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (camPosition.position != startCamPosition)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         animator.SetTrigger("Enter");
