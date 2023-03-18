@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Steamworks;
 
 public class TextManager_WD: MonoBehaviour 
 {
@@ -16,7 +17,13 @@ public class TextManager_WD: MonoBehaviour
         paragraphs[0].SetActive(true);
         pictures[0].SetActive(true);
         nextButton.onClick.AddListener(TaskOnClick);
-        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_IJWSS").Trigger();
+        //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_IJWSS").Trigger();
+
+        if (SteamManager.Initialized)
+        {
+            SteamUserStats.SetAchievement("ACHIEVEMENT_IJWSS");
+            SteamUserStats.StoreStats();
+        }
     }
     public void TaskOnClick()
     {

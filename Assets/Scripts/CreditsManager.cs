@@ -26,7 +26,7 @@ public class CreditsManager : MonoBehaviour, IPointerDownHandler
         textContainer.SetActive(false);
         if (finalScene == true)
         {
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_HappilyEverAfter").Trigger();
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_HappilyEverAfter").Trigger();
         }
 
     }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Steamworks;
 
-public class TextManager_PF3O: MonoBehaviour 
+public class TextManager_PF3O : MonoBehaviour
 {
     public List<GameObject> paragraphs = new List<GameObject>();
     private int spawnIndex = 0;
@@ -20,12 +21,20 @@ public class TextManager_PF3O: MonoBehaviour
         Exceptions();
         Lineup();
         paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
-       
+
         if (paragraphs[0].GetComponent<TMPro.TextMeshProUGUI>().enabled == true)
         {
             paragraphs[paragraphs.Count - 1].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
             theEnd.SetActive(true);
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AdventureShmadventure").Trigger();
+
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AdventureShmadventure").Trigger();
+
+            if (SteamManager.Initialized)
+            {
+                SteamUserStats.SetAchievement("ACHIEVEMENT_AdventureShmadventure");
+                SteamUserStats.StoreStats();
+            }
+
         }
 
     }
@@ -33,9 +42,9 @@ public class TextManager_PF3O: MonoBehaviour
     {
         if (spawnIndex <= paragraphs.Count - 1)
         {
-        int i = spawnIndex++;            
+            int i = spawnIndex++;
 
-        paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
+            paragraphs[i].GetComponent<TMPro.TextMeshProUGUI>().enabled = true;
         }
 
     }
@@ -59,6 +68,6 @@ public class TextManager_PF3O: MonoBehaviour
     {
         // this looks spooky but it is basically: put an object beneath at (1/2 of the width of object above + 1/2 width of the object beneath)
 
-        paragraphs[1].transform.position = paragraphs[0].transform.position + Vector3.down * (paragraphs[0].GetComponent<Collider2D>().bounds.extents.y + paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + .2f);     
+        paragraphs[1].transform.position = paragraphs[0].transform.position + Vector3.down * (paragraphs[0].GetComponent<Collider2D>().bounds.extents.y + paragraphs[1].GetComponent<Collider2D>().bounds.extents.y + .2f);
     }
 }

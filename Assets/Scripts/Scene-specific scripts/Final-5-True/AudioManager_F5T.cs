@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Steamworks;
 
 public class AudioManager_F5T : MonoBehaviour
 {
@@ -123,7 +124,13 @@ public class AudioManager_F5T : MonoBehaviour
         {
             nextTrack.gameObject.SetActive(false);
             endStory.gameObject.SetActive(true);
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_HappilyEverAfter").Trigger();
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_HappilyEverAfter").Trigger();
+
+            if (SteamManager.Initialized)
+            {
+                SteamUserStats.SetAchievement("ACHIEVEMENT_HappilyEverAfter");
+                SteamUserStats.StoreStats();
+            }
         }
 
     }

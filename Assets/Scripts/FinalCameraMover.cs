@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Steamworks;
 
 public class FinalCameraMover : MonoBehaviour
 {
@@ -64,7 +65,13 @@ public class FinalCameraMover : MonoBehaviour
             if (witchVision != null)
             {
                 witchVision.SetActive(true);
-                var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_BrokenLoop").Trigger();
+                //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_BrokenLoop").Trigger();
+
+                if (SteamManager.Initialized)
+                {
+                    SteamUserStats.SetAchievement("ACHIEVEMENT_BrokenLoop");
+                    SteamUserStats.StoreStats();
+                }
             }
 
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Steamworks;
 
 public class Intro_Jar : MonoBehaviour
 {
@@ -79,6 +80,12 @@ public class Intro_Jar : MonoBehaviour
 
     void UnlockAchievement()
     {
-        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_Qualified").Trigger();
+        //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_Qualified").Trigger();
+
+        if (SteamManager.Initialized)
+        {
+            SteamUserStats.SetAchievement("ACHIEVEMENT_Qualified");
+            SteamUserStats.StoreStats();
+        }
     }
 }

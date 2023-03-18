@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Steamworks;
 
 public class IntObjController_Page9A : MonoBehaviour
 {
@@ -35,7 +36,13 @@ public class IntObjController_Page9A : MonoBehaviour
             bushes.SetActive(false);
             doormat.SetActive(false);
             animator.SetBool("DoorOpens", true);
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_TheArtOfWaiting").Trigger();
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_TheArtOfWaiting").Trigger();
+            if (SteamManager.Initialized)
+            {
+                SteamUserStats.SetAchievement("ACHIEVEMENT_TheArtOfWaiting");
+                SteamUserStats.StoreStats();
+            }
+
             StartCoroutine(WaitForIdle());
         }
     }

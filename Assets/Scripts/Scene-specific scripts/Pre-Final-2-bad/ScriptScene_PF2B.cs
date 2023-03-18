@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Steamworks;
 
 public class ScriptScene_PF2B : MonoBehaviour
 {
@@ -67,7 +68,13 @@ public class ScriptScene_PF2B : MonoBehaviour
         {
             anim.SetFloat("Speed", 0);
             princessSpeed = 0;
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_WarmWelcome").Trigger();
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_WarmWelcome").Trigger();
+
+            if (SteamManager.Initialized)
+            {
+                SteamUserStats.SetAchievement("ACHIEVEMENT_WarmWelcome");
+                SteamUserStats.StoreStats();
+            }
         }
 
 

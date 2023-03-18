@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Steamworks;
 
 public class FinalManager_F4G : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class FinalManager_F4G : MonoBehaviour
             positions[3].GetComponent<Renderer>().enabled = true;
         }
 
-        var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AlmostGood").Trigger();
+        //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_AlmostGood").Trigger();
+
+        if (SteamManager.Initialized)
+        {
+            SteamUserStats.SetAchievement("ACHIEVEMENT_AlmostGood");
+            SteamUserStats.StoreStats();
+        }
     }
 }

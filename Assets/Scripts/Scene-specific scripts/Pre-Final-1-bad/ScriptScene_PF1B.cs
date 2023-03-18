@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Steamworks;
 
 public class ScriptScene_PF1B : MonoBehaviour
 {
@@ -46,7 +47,12 @@ public class ScriptScene_PF1B : MonoBehaviour
         if (currentPrincessPosition == 3)
         {
             anim.SetBool("SitFinal", true);
-            var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_NoOneHome").Trigger();
+            //var achievement = new Steamworks.Data.Achievement("ACHIEVEMENT_NoOneHome").Trigger();
+            if (SteamManager.Initialized)
+            {
+                SteamUserStats.SetAchievement("ACHIEVEMENT_NoOneHome");
+                SteamUserStats.StoreStats();
+            }
         }
 
 
